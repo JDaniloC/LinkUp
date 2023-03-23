@@ -21,6 +21,9 @@ struct Relationships: View {
                 Text("Veja as pessoas de sua equipe que você já trabalhou e quais ainda precisa conhecer melhor")
                     .font(.custom("Inter-Light", size: 16))
                     .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding(30)
+                    
                 ForEach(relationships, id: \.self, content: {
                     relationship in
                     NavigationLink(value: relationship) {

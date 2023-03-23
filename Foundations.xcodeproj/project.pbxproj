@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
 		EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39B37D29CC9D6B00B3861C /* Relationships.swift */; };
-		EA658AF729C9EA15003E20B7 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF629C9EA15003E20B7 /* GeneralSettingsView.swift */; };
 		EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */; };
 		EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */; };
 		EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4050F29C0BE3E00308527 /* ContentView.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
 		EA39B37D29CC9D6B00B3861C /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
-		EA658AF629C9EA15003E20B7 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
 		EAE4050A29C0BE3E00308527 /* Foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foundations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationsApp.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				EAE4051329C0BE4300308527 /* Preview Content */,
 				EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */,
 				EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */,
-				EA658AF629C9EA15003E20B7 /* GeneralSettingsView.swift */,
 				EAE4050F29C0BE3E00308527 /* ContentView.swift */,
 			);
 			path = Foundations;
@@ -287,7 +284,6 @@
 			files = (
 				EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
-				EA658AF729C9EA15003E20B7 /* GeneralSettingsView.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
 				EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */,
