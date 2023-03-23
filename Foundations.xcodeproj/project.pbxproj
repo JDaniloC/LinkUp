@@ -116,9 +116,9 @@
 		EAE4050C29C0BE3E00308527 /* Foundations */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4051129C0BE4300308527 /* Assets.xcassets */,
 				EA39B37C29CC9D5700B3861C /* Pages */,
 				EA00E06A29CC947D00C55FB6 /* Components */,
-				EAE4051129C0BE4300308527 /* Assets.xcassets */,
 				EAE4051329C0BE4300308527 /* Preview Content */,
 				EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */,
 				EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */,
