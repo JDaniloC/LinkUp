@@ -24,7 +24,9 @@ struct ProfileCircle: View {
                     .inset(by: 0)
                     .stroke(Color("light-yellow"),
                             lineWidth: 8)
-            }.frame(width: 100, height: 120)
+            }
+                .frame(width: 100, height: 100)
+                .padding(.bottom)
             Text(profileName)
                 .foregroundColor(.black)
                 .fontWeight(.light)

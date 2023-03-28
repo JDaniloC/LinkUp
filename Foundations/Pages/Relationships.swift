@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+struct Relationship: Hashable {
+     var name: String
+     var image: String
+ }
+
+struct MyProfile: Hashable {};
+
+struct SomeView: View {
+     var texto: String = ""
+
+     var body: some View {
+         Text("\(texto)")
+     }
+}
+
 struct Relationships: View {
     let profile: MyProfile = MyProfile()
 
