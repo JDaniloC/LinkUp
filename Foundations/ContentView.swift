@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-enum Tabs: Hashable {
+enum Tabs: CaseIterable {
     case relationships, dynamics, profile
-    
-    var getIcon: String {
-        switch(self) {
+
+    var icon: String {
+        switch (self) {
             case .relationships:
                 return "team-icon"
             case .dynamics:
@@ -57,7 +57,7 @@ struct ContentView: View {
     ) -> some View {
         VStack {
             let isSelected = selection == option;
-            var iconName: String = option.getIcon;
+            let iconName: String = option.icon;
             Image(isSelected ? "selected-\(iconName)": iconName)
             Text(label)
         }
