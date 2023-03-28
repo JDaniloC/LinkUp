@@ -7,34 +7,59 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    private enum Tabs: Hashable {
-        case general, advanced
-    }
+enum Tabs: Hashable {
+    case relationships, dynamics, profile
     
-    @State private var idadeCao: String = "";
-    @State private var idadeCao2: Int = 0;
+    var getIcon: String {
+        switch(self) {
+            case .relationships:
+                return "team-icon"
+            case .dynamics:
+                return "dynamics-icon"
+            case .profile:
+                return "person-icon"
+        }
+    }
+}
+
+struct ContentView: View {
+    @State private var selection: Tabs = Tabs.relationships;
     
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             Relationships()
                 .tabItem() {
-                    Label("Conexões",
-                          image: "team-icon")
+                    renderTagIcon(
+                        label: "Conexões",
+                        optionToVerify: Tabs.relationships)
                 }
-                .tag(Tabs.general)
+                .tag(Tabs.relationships)
             AdvancedSettingsView()
                 .tabItem() {
-                    Label("Dinâmicas",
-                          image: "dynamics-icon")
+                    renderTagIcon(
+                        label: "Dinâmicas",
+                        optionToVerify: Tabs.dynamics)
                 }
-                .tag(Tabs.advanced)
+                .tag(Tabs.dynamics)
             AdvancedSettingsView()
                 .tabItem() {
-                    Label("Meu Perfil",
-                          image: "person-icon")
+                    renderTagIcon(
+                        label: "Meu perfil",
+                        optionToVerify: Tabs.profile)
                 }
-                .tag(Tabs.advanced)
+                .tag(Tabs.profile)
+        }
+    }
+    
+    private func renderTagIcon(
+        label: String,
+        optionToVerify option: Tabs
+    ) -> some View {
+        VStack {
+            let isSelected = selection == option;
+            var iconName: String = option.getIcon;
+            Image(isSelected ? "selected-\(iconName)": iconName)
+            Text(label)
         }
     }
 }
