@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
-
+extension CGPoint : Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(x)
+    hasher.combine(y)
+  }
+}
 struct Relationship: Hashable {
-     var name: String
-     var image: String
+    var name: String
+    var image: String
+    var coord: CGPoint
  }
 
 struct MyProfile: Hashable {};
@@ -25,10 +31,10 @@ struct SomeView: View {
 struct Relationships: View {
     let profile: MyProfile = MyProfile()
 
-    let relationships: [Relationship] = [
-        Relationship(name: "Kiev Gama", image: "kiev-gama"),
-        Relationship(name: "Lisa Mello", image: "lisa-mello")
-    ]
+//    let relationships: [Relationship] = [
+//        Relationship(name: "Kiev Gama", image: "kiev-gama"),
+//        Relationship(name: "Lisa Mello", image: "lisa-mello")
+//    ]
 
     var body: some View {
         NavigationStack {
@@ -39,13 +45,13 @@ struct Relationships: View {
                     .multilineTextAlignment(.center)
                     .padding(30)
                     
-                ForEach(relationships, id: \.self, content: {
-                    relationship in
-                    NavigationLink(value: relationship) {
-                        ProfileCircle(imagePath: relationship.image,
-                                      profileName: relationship.name)
-                    }
-                })
+//                ForEach(relationships, id: \.self, content: {
+//                    relationship in
+//                    NavigationLink(value: relationship) {
+//                        ProfileCircle(imagePath: relationship.image,
+//                                      profileName: relationship.name)
+//                    }
+//                })
                 NavigationLink(value: profile) {
                     ProfileCircle(imagePath: "profile",
                                   profileName: "Você")
@@ -54,18 +60,18 @@ struct Relationships: View {
             .navigationTitle("Minhas conexões")
             .navigationBarTitleDisplayMode(.inline
             )
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("Minhas conexões").font(.title2)
-                        .bold()
-                }
-            }
-            .navigationDestination(for: Relationship.self){ relationship in
-                SomeView(texto: relationship.name)
-            }
-            .navigationDestination(for: MyProfile.self) { _ in
-                SomeView(texto: "Meu profile")
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .principal) {
+//                    Text("Minhas conexões").font(.title2)
+//                        .bold()
+//                }
+//            }
+//            .navigationDestination(for: Relationship.self){ relationship in
+//                SomeView(texto: relationship.name)
+//            }
+//            .navigationDestination(for: MyProfile.self) { _ in
+//                SomeView(texto: "Meu profile")
+//            }
         }
     }
 }
