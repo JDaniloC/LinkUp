@@ -38,22 +38,23 @@ struct Relationships: View {
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding(30)
-                    
                 ForEach(relationships, id: \.self, content: {
                     relationship in
                     NavigationLink(value: relationship) {
-                        ProfileCircle(imagePath: relationship.image,
-                                      profileName: relationship.name)
+                        ProfileCircle(
+                            relationship.image,
+                            profileName: relationship.name)
                     }
                 })
                 NavigationLink(value: profile) {
-                    ProfileCircle(imagePath: "profile",
-                                  profileName: "Você")
+                    ProfileCircle("profile",
+                        profileName: "Você"
+                    )
                 }
+                Spacer()
             }
             .navigationTitle("Minhas conexões")
-            .navigationBarTitleDisplayMode(.inline
-            )
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("Minhas conexões").font(.title2)
