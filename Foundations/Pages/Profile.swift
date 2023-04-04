@@ -83,26 +83,6 @@ struct Profile: View {
                         ) {
                             CustomText("Confira as músicas que você está compartilha")
                         }
-                        ProfileCard(
-                            title: "ScrollView Teste"
-                        ) {
-                            CustomText("Testando o scrollView")
-                        }
-                        ProfileCard(
-                            title: "ScrollView Teste"
-                        ) {
-                            CustomText("Testando o scrollView")
-                        }
-                        ProfileCard(
-                            title: "ScrollView Teste"
-                        ) {
-                            CustomText("Testando o scrollView")
-                        }
-                        ProfileCard(
-                            title: "ScrollView Teste"
-                        ) {
-                            CustomText("Testando o scrollView")
-                        }
                     }.padding(.all, 20)
                 }
             }

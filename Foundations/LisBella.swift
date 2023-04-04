@@ -7,23 +7,44 @@
 
 import SwiftUI
 
-struct LisBella: View {
+extension PresentationDetent {
+    static let bar = Self.custom(BarDetent.self)
+    static let small = Self.height(100)
+    static let extraLarge = Self.fraction(0.75)
+}
+
+private struct BarDetent: CustomPresentationDetent {
+    static func height(in context: Context) -> CGFloat? {
+        max(44, context.maxDetentValue * 0.1)
+    }
+}
+
+struct SheetView: View {
+    @Binding var showView: Bool
+
     var body: some View {
-        ProfileCard(
-            title: "Conexões"
-        ) {
-            HStack(spacing: -10) {
-                ProfileCircle("profile",
-                              radius: 45)
-                    .frame(height: 25)
-                ProfileCircle("kiev-gama",
-                              radius: 45)
-                    .frame(height: 25)
-                Text("...").font(.custom(
-                        "Inter-Light",
-                        size: 16
-                )).padding(.leading, 15)
-            }
+        Button("Press to dismiss") {
+            withAnimation { showView.toggle() }
+        }
+        .font(.title)
+        .padding()
+        .background(.black)
+    }
+}
+
+struct LisBella: View {
+    @State private var showSettings = false
+    @State private var selectedDetent = PresentationDetent.bar
+
+    var body: some View {
+        Button("View Settings") {
+            showSettings = true
+        }
+        .sheet(isPresented: $showSettings) {
+            SheetView(showView: $showSettings)
+                .presentationDetents(
+                    [.bar, .small, .medium, .large, .extraLarge],
+                    selection: $selectedDetent)
         }
     }
 }

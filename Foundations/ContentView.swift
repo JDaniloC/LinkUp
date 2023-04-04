@@ -41,7 +41,7 @@ struct ContentView: View {
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
-            AdvancedSettingsView()
+            Profile()
                 .tabItem() {
                     renderTagIcon(
                         label: "Meu perfil",
