@@ -20,7 +20,6 @@
 		EA36AC8329D6002700E40954 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36AC8229D6002700E40954 /* CustomText.swift */; };
 		EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39B37D29CC9D6B00B3861C /* Relationships.swift */; };
 		EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */; };
-		EAA1CB2829D3641A00A0BDF0 /* LisBella.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2729D3641A00A0BDF0 /* LisBella.swift */; };
 		EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2929D3684300A0BDF0 /* Profile.swift */; };
 		EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */; };
 		EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */; };
@@ -51,20 +50,19 @@
 
 /* Begin PBXFileReference section */
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
-		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Thin.ttf"; sourceTree = "<group>"; };
-		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Light.ttf"; sourceTree = "<group>"; };
-		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "../../../../../Downloads/Inter/static/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
-		EA36AC7229D5D27D00E40954 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Black.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Black.ttf"; sourceTree = "<group>"; };
-		EA36AC7329D5D27D00E40954 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Medium.ttf"; sourceTree = "<group>"; };
-		EA36AC7429D5D27D00E40954 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Regular.ttf"; sourceTree = "<group>"; };
-		EA36AC7529D5D27D00E40954 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBold.ttf"; path = "../../../../../Downloads/Inter/static/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraLight.ttf"; path = "../../../../../Downloads/Inter/static/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
-		EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.ttf"; path = "../../../../../Downloads/Inter/static/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "Foundations/Fonts/Inter-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "Foundations/Fonts/Inter-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7229D5D27D00E40954 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Black.ttf"; path = "Foundations/Fonts/Inter-Black.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7329D5D27D00E40954 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "Foundations/Fonts/Inter-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7429D5D27D00E40954 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "Foundations/Fonts/Inter-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7529D5D27D00E40954 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBold.ttf"; path = "Foundations/Fonts/Inter-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraLight.ttf"; path = "Foundations/Fonts/Inter-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
+		EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.ttf"; path = "Foundations/Fonts/Inter-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC8129D5D2D500E40954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA36AC8229D6002700E40954 /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		EA39B37D29CC9D6B00B3861C /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
-		EAA1CB2729D3641A00A0BDF0 /* LisBella.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisBella.swift; sourceTree = "<group>"; };
 		EAA1CB2929D3684300A0BDF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 		EAE4050A29C0BE3E00308527 /* Foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foundations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +169,6 @@
 				EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */,
 				EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */,
 				EAE4050F29C0BE3E00308527 /* ContentView.swift */,
-				EAA1CB2729D3641A00A0BDF0 /* LisBella.swift */,
 			);
 			path = Foundations;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
-				EAA1CB2829D3641A00A0BDF0 /* LisBella.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
 				EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */,
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
