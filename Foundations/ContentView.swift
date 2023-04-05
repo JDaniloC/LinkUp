@@ -23,6 +23,7 @@ enum Tabs: CaseIterable {
 }
 
 struct ContentView: View {
+    @StateObject private var profileVM = ProfileViewModel()
     @State private var selection: Tabs = Tabs.relationships;
     
     var body: some View {
@@ -41,14 +42,14 @@ struct ContentView: View {
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
-            Profile()
+            ProfileView()
                 .tabItem() {
                     renderTagIcon(
                         label: "Meu perfil",
                         optionToVerify: Tabs.profile)
                 }
                 .tag(Tabs.profile)
-        }
+        }.environmentObject(profileVM)
     }
     
     private func renderTagIcon(
