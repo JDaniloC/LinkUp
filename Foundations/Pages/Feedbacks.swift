@@ -24,15 +24,14 @@ struct Feedbacks: View {
             Text("Feedbacks")
                 .font(.title)
             ForEach(sampleData, id: \.self) { datum in
-                VStack (spacing: 10) {
-                    HStack (spacing: 10) {
-                        ProfileCircle(datum.image, profileName: datum.user)
-                            .padding(20)
-                        Text(datum.comment)
-                            .font(.footnote)
-                            .padding(20)
-                    }
+                HStack (spacing: 10) {
+                    ProfileCircle(datum.image, profileName: datum.user)
+                        .padding(20)
+                    Text(datum.comment)
+                        .font(.footnote)
+                        .padding(20)
                 }
+                Divider()
             }
         }
         .background(.orange)
