@@ -16,7 +16,7 @@ struct RelationTest: View {
     let profile: MyProfile = MyProfile()
 
     let relationships: [Relationship] = [
-        Relationship(name: "Kiev Gama", image: "kiev-gama" , coord: CGPoint(x:220,y:100)),
+        Relationship(name: "Kiev Gama", image: "kiev-gama" , coord: CGPoint(x:200,y:100)),
         Relationship(name: "Lisa Mello", image: "lisa-mello",coord: CGPoint(x:320,y:400))
     ]
     var nodes = [CGPoint(x:320,y:50),CGPoint(x:320,y: 500),CGPoint(x:50,y:100)]
@@ -44,15 +44,15 @@ struct RelationTest: View {
 //                         imagePath2: relationships[0].image, profileName2: relationships[0].name)
                     ForEach(relationships, id: \.self, content: {
                      relationship in
-                     NavigationLink(value: relationship) {
+                   //  NavigationLink(destination: Text("Second View") ) {
                      Link(coordP1:myself,
                           coordP2:relationship.coord,
                           imagePath: "profile",
                           profileName: "Voce",
                           imagePath2: relationship.image,
                           profileName2: relationship.name)
-                     }
-                     })
+                 //   }
+                     }) 
                    }
                
 //                NavigationLink(value: profile) {
