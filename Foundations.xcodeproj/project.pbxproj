@@ -17,11 +17,9 @@
 		EA36AC7E29D5D27D00E40954 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7529D5D27D00E40954 /* Inter-SemiBold.ttf */; };
 		EA36AC7F29D5D27D00E40954 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */; };
 		EA36AC8029D5D27D00E40954 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */; };
-		EA36AC8329D6002700E40954 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36AC8229D6002700E40954 /* CustomText.swift */; };
 		EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39B37D29CC9D6B00B3861C /* Relationships.swift */; };
 		EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93229DDE2840048BC43 /* ProfileView.swift */; };
 		EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */; };
-		EA5DE93A29DDE3310048BC43 /* GrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93929DDE3310048BC43 /* GrayButton.swift */; };
 		EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */; };
 		EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */; };
 		EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */; };
@@ -65,11 +63,9 @@
 		EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraLight.ttf"; path = "Foundations/Fonts/Inter-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.ttf"; path = "Foundations/Fonts/Inter-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC8129D5D2D500E40954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EA36AC8229D6002700E40954 /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		EA39B37D29CC9D6B00B3861C /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
 		EA5DE93229DDE2840048BC43 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		EA5DE93929DDE3310048BC43 /* GrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayButton.swift; sourceTree = "<group>"; };
 		EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardGrid.swift; sourceTree = "<group>"; };
 		EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
@@ -117,8 +113,6 @@
 			children = (
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
-				EA36AC8229D6002700E40954 /* CustomText.swift */,
-				EA5DE93929DDE3310048BC43 /* GrayButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				EA36AC8129D5D2D500E40954 /* Info.plist */,
-				EA36AC6E29D5D22400E40954 /* Fonts */,
 				EAE4051129C0BE4300308527 /* Assets.xcassets */,
+				EA36AC6E29D5D22400E40954 /* Fonts */,
 				EA39B37C29CC9D5700B3861C /* Pages */,
 				EA00E06A29CC947D00C55FB6 /* Components */,
 				EAE4051329C0BE4300308527 /* Preview Content */,
@@ -368,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5DE93A29DDE3310048BC43 /* GrayButton.swift in Sources */,
 				EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */,
 				EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
@@ -380,7 +373,6 @@
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
 				EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */,
 				EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */,
-				EA36AC8329D6002700E40954 /* CustomText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

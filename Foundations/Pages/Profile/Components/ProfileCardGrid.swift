@@ -29,7 +29,12 @@ struct ProfileCardGrid: View {
                     ProfileCard(
                         title: card.title
                     ) {
-                        CustomText(card.description)
+                        Text(card.description)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(
+                                Color("black-color"))
+                            .font(.custom("Inter-Regular",
+                                          size: 15))
                     }
                 }
             }

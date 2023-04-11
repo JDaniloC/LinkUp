@@ -14,11 +14,23 @@ struct GrayButton: ButtonStyle {
             .padding(.horizontal, 100)
             .padding(.vertical, 10)
             .overlay(
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(Color(.lightGray))
-                    Text("Teste").foregroundColor(.black)
-                }
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(Color(.lightGray))
             )
+    }
+}
+
+struct GrayButton_Previews: PreviewProvider {
+    static var previews: some View {
+        Button(action: {
+            
+        }) {
+            Text("Novo Card")
+                .padding(.vertical, 5)
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity,
+                       alignment: .leading)
+        }.buttonStyle(.bordered)
+            .padding(.horizontal, 30)
     }
 }
