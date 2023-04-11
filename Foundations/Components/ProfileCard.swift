@@ -33,7 +33,7 @@ struct ProfileCard<Content: View>: View {
         .background(LinearGradient(
             gradient: Gradient(
                 colors: [
-                    Color("card-color"),
+                    Color("light-yellow"),
                     .white
                 ]
             ),
@@ -44,7 +44,7 @@ struct ProfileCard<Content: View>: View {
         .overlay(
             RoundedRectangle(
                 cornerRadius: 20
-            ).stroke(Color("card-color"),
+            ).stroke(Color("light-yellow"),
                      lineWidth: 2)
         )
     }

@@ -33,7 +33,7 @@ struct ProfileView: View {
                                    alignment: .leading)
                     }.buttonStyle(.bordered)
                         .padding(.horizontal, 30)
-                    ProfileCardGrid(viewModel: viewModel)
+                    ProfileCardGrid()
                 }
             }
         }

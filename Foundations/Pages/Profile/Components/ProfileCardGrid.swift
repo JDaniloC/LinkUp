@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileCardGrid: View {
-    @ObservedObject var viewModel: ProfileViewModel    
+    @EnvironmentObject var viewModel: ProfileViewModel
     @State private var showCard: Bool = false
 
     let columns = [
@@ -41,10 +41,14 @@ struct ProfileCardGrid: View {
         }.padding(.all, 20)
          .sheet(isPresented: $showCard) {
              ProfileCardView($viewModel.textCardInfo.title) {
-                 Text(viewModel.textCardInfo.text)
-                     .font(.custom("Inter-Regular",
-                                   size: 20))
-                     .padding(.horizontal, 20)
+                 if viewModel.textCardInfo.title == "Feedbacks" {
+                     Feedbacks()
+                 } else {
+                     Text(viewModel.textCardInfo.text)
+                         .font(.custom("Inter-Regular",
+                                       size: 20))
+                         .padding(.horizontal, 20)
+                 }
              }.presentationDragIndicator(.hidden)
              .presentationDetents([.medium, .large])
          }
@@ -54,6 +58,6 @@ struct ProfileCardGrid: View {
 struct ProfileCardGrid_Previews: PreviewProvider {
     static var previews: some View {
         @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
-        ProfileCardGrid(viewModel: viewModel)
+        ProfileCardGrid().environmentObject(viewModel)
     }
 }

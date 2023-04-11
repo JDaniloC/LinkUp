@@ -29,7 +29,8 @@ struct Relationships: View {
                     title: "História",
                     description: "Confira a história que você está compartilhando"
                 )
-            ]
+            ],
+            feedbacks: []
         ),
         Profile(
             name: "Lisa Mello",
@@ -41,7 +42,8 @@ struct Relationships: View {
                     title: "Objetivos",
                     description: "Confira os objetivos que você está compartilhando"
                 )
-            ]
+            ],
+            feedbacks: []
         )
     ]
 

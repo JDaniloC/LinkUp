@@ -30,7 +30,7 @@ struct ProfileCardView<Content: View>: View {
             gradient: Gradient(
                 colors: [
                     .white,
-                    Color("card-color")
+                    Color("light-yellow")
                 ]
             ),
             startPoint: .top, endPoint: .bottom
