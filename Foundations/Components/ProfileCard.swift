@@ -19,24 +19,21 @@ struct ProfileCard<Content: View>: View {
                 .font(.custom("Inter-Bold",
                               size: 17))
                 .fontWeight(.bold)
+                .multilineTextAlignment(.leading)
             Spacer()
             HStack(alignment: .bottom) {
                 content
                 Spacer()
-                Button(action: {
-                    
-                }) {
-                    Image(
-                        systemName: "chevron.right"
-                    ).foregroundColor(
-                        Color("black-color"))
-                }
+                Image(
+                    systemName: "chevron.right"
+                ).foregroundColor(
+                    Color("black-color"))
             }
         }.padding(.all, 20)
         .background(LinearGradient(
             gradient: Gradient(
                 colors: [
-                    Color("card-color"),
+                    Color("light-yellow"),
                     .white
                 ]
             ),
@@ -47,7 +44,7 @@ struct ProfileCard<Content: View>: View {
         .overlay(
             RoundedRectangle(
                 cornerRadius: 20
-            ).stroke(Color("card-color"),
+            ).stroke(Color("light-yellow"),
                      lineWidth: 2)
         )
     }

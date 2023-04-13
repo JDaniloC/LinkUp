@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AdvancedSettingsView: View {
     var body: some View {
-        Text("AdvancedSettingsView")
+        Text("Hello World")
     }
 }
 

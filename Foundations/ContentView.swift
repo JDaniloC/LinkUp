@@ -23,17 +23,21 @@ enum Tabs: CaseIterable {
 }
 
 struct ContentView: View {
+    @StateObject private var profileVM = ProfileViewModel()
+    @StateObject private var relationVM = ProfileViewModel()
+    @StateObject var relationsVM = RelationshipsViewModel()
     @State private var selection: Tabs = Tabs.relationships;
     
     var body: some View {
         TabView(selection: $selection) {
-            Relationships()
+            RelationshipsView(relationsVM: relationsVM)
                 .tabItem() {
                     renderTagIcon(
                         label: "Conexões",
                         optionToVerify: Tabs.relationships)
                 }
                 .tag(Tabs.relationships)
+                .environmentObject(relationVM)
             AdvancedSettingsView()
                 .tabItem() {
                     renderTagIcon(
@@ -41,13 +45,14 @@ struct ContentView: View {
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
-            Profile()
+            ProfileView()
                 .tabItem() {
                     renderTagIcon(
                         label: "Meu perfil",
                         optionToVerify: Tabs.profile)
                 }
                 .tag(Tabs.profile)
+                .environmentObject(profileVM)
         }
     }
     

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
+		EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */; };
+		EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */; };
 		EA36AC7829D5D27D00E40954 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */; };
 		EA36AC7929D5D27D00E40954 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */; };
 		EA36AC7A29D5D27D00E40954 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */; };
@@ -17,8 +20,11 @@
 		EA36AC7E29D5D27D00E40954 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7529D5D27D00E40954 /* Inter-SemiBold.ttf */; };
 		EA36AC7F29D5D27D00E40954 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */; };
 		EA36AC8029D5D27D00E40954 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */; };
-		EA36AC8329D6002700E40954 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36AC8229D6002700E40954 /* CustomText.swift */; };
 		EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39B37D29CC9D6B00B3861C /* Relationships.swift */; };
+		EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93229DDE2840048BC43 /* ProfileView.swift */; };
+		EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */; };
+		EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */; };
+		EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */; };
 		EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */; };
 		EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2929D3684300A0BDF0 /* Profile.swift */; };
 		EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */; };
@@ -49,7 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
+		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
+		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
 		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "Foundations/Fonts/Inter-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "Foundations/Fonts/Inter-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
@@ -60,8 +69,11 @@
 		EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraLight.ttf"; path = "Foundations/Fonts/Inter-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.ttf"; path = "Foundations/Fonts/Inter-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC8129D5D2D500E40954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EA36AC8229D6002700E40954 /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		EA39B37D29CC9D6B00B3861C /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
+		EA5DE93229DDE2840048BC43 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
+		EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardGrid.swift; sourceTree = "<group>"; };
 		EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
 		EAA1CB2929D3684300A0BDF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
@@ -107,9 +119,18 @@
 			children = (
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
-				EA36AC8229D6002700E40954 /* CustomText.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EA0C57C629E6F79A00A8D1F3 /* Relationships */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */,
+				EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */,
+				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
+			);
+			path = Relationships;
 			sourceTree = "<group>";
 		};
 		EA36AC6E29D5D22400E40954 /* Fonts */ = {
@@ -131,10 +152,31 @@
 		EA39B37C29CC9D5700B3861C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
-				EAA1CB2929D3684300A0BDF0 /* Profile.swift */,
+				EA0C57C629E6F79A00A8D1F3 /* Relationships */,
+				EA5DE93829DDE2A00048BC43 /* Profile */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		EA5DE93829DDE2A00048BC43 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EA5DE93B29DDE3A50048BC43 /* Components */,
+				EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */,
+				EA5DE93229DDE2840048BC43 /* ProfileView.swift */,
+				EAA1CB2929D3684300A0BDF0 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EA5DE93B29DDE3A50048BC43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				65FF062D29E1C08E0057C938 /* Feedbacks.swift */,
+				EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */,
+				EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		EAE4050129C0BE3E00308527 = {
@@ -161,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				EA36AC8129D5D2D500E40954 /* Info.plist */,
-				EA36AC6E29D5D22400E40954 /* Fonts */,
 				EAE4051129C0BE4300308527 /* Assets.xcassets */,
+				EA36AC6E29D5D22400E40954 /* Fonts */,
 				EA39B37C29CC9D5700B3861C /* Pages */,
 				EA00E06A29CC947D00C55FB6 /* Components */,
 				EAE4051329C0BE4300308527 /* Preview Content */,
@@ -338,13 +380,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */,
+				EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */,
+				EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
+				EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */,
+				EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
 				EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */,
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
-				EA36AC8329D6002700E40954 /* CustomText.swift in Sources */,
+				EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */,
+				EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */,
+				65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
