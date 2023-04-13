@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
+		EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */; };
+		EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */; };
 		EA36AC7829D5D27D00E40954 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */; };
 		EA36AC7929D5D27D00E40954 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */; };
 		EA36AC7A29D5D27D00E40954 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
+		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
+		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
 		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "Foundations/Fonts/Inter-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "Foundations/Fonts/Inter-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
@@ -119,6 +123,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		EA0C57C629E6F79A00A8D1F3 /* Relationships */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */,
+				EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */,
+				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
+			);
+			path = Relationships;
+			sourceTree = "<group>";
+		};
 		EA36AC6E29D5D22400E40954 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +152,8 @@
 		EA39B37C29CC9D5700B3861C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C57C629E6F79A00A8D1F3 /* Relationships */,
 				EA5DE93829DDE2A00048BC43 /* Profile */,
-				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -366,10 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */,
+				EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */,
 				EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */,
+				EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
 				EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */,
