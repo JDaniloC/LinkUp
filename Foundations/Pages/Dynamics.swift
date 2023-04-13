@@ -12,23 +12,17 @@ struct Dynamics: View {
     
     var body: some View {
         VStack {
-            
-            if scrollView == false {
+            if !scrollView {
                 DynamicsCards()
-            }
-            
-            Button(
-                action: {
-                    scrollView.toggle()
-                },
-                label: {
-                    if scrollView == false {
+                Button(
+                    action: {
+                        scrollView.toggle()
+                    },
+                    label: {
                         Text("Exibir Dinâmicas")
-                    }
-            })
-            .offset(y: 50)
-            
-            if scrollView {
+                })
+                .offset(y: 52)
+            } else {
                 DynamicsCardsScroll()
             }
         }

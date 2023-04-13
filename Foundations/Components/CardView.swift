@@ -61,7 +61,6 @@ struct CardView: View {
                     .foregroundColor(Color(red: 90/255, green: 90/255, blue: 90/255))
                 
                 Button {
-                    
                     isModalOpen.toggle()
                 } label: {
                     Image(systemName: "chevron.right")
@@ -69,15 +68,15 @@ struct CardView: View {
                 .dynamicTypeSize(.xxxLarge)
                 .offset(x: 140, y: 70)
             }
-            .sheet(isPresented: $isModalOpen, content: {
-                DynamicDescriptionPage(title: card.name, description: card.description, photos: card.participants)
-            })
+            .fullScreenCover(isPresented: $isModalOpen) {
+                DynamicDescriptionPage(isModalOpen: $isModalOpen, title: card.name, description: card.description, photos: card.participants)
+            }
         }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: CardInformation(name: "default", description: "default...", photos: ["name"]))
+        CardView(card: CardInformation(name: "Trocando Hobbies", description: "default...", photos: ["name"]))
     }
 }

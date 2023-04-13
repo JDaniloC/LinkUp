@@ -19,6 +19,7 @@ struct DynamicsCardsScroll: View {
                 }
             }
         }
+        .padding(.top)
     }
 }
 
