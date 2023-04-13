@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DynamicsView: View {
+struct Dynamics: View {
     @State var scrollView: Bool = false
     
     var body: some View {
@@ -41,8 +41,8 @@ struct DynamicsView: View {
 }
 
 
-struct DynamicsView_Previews: PreviewProvider {
+struct Dynamics_Previews: PreviewProvider {
     static var previews: some View {
-        DynamicsView()
+        Dynamics()
     }
 }

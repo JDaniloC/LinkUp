@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2BA675C29DC9E6A008C32A9 /* DynamicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA675B29DC9E6A008C32A9 /* DynamicsView.swift */; };
-		B2BA675E29DC9EAA008C32A9 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA675D29DC9EAA008C32A9 /* ModalView.swift */; };
+		B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */; };
+		B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25DC1BE29E72F0800088D62 /* Dynamics.swift */; };
+		B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261A26F29DDE81400326C72 /* DynamicsCards.swift */; };
+		B28D8C8329DDEC4D00E9CC61 /* DynamicsCardsScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */; };
 		B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA675F29DC9EB9008C32A9 /* CardView.swift */; };
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
 		EA36AC7829D5D27D00E40954 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */; };
@@ -52,8 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B2BA675B29DC9E6A008C32A9 /* DynamicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicsView.swift; path = Foundations/Pages/DynamicsView.swift; sourceTree = SOURCE_ROOT; };
-		B2BA675D29DC9EAA008C32A9 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalView.swift; path = Foundations/Components/ModalView.swift; sourceTree = SOURCE_ROOT; };
+		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
+		B25DC1BE29E72F0800088D62 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
+		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
+		B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCardsScroll.swift; sourceTree = "<group>"; };
 		B2BA675F29DC9EB9008C32A9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Foundations/Components/CardView.swift; sourceTree = SOURCE_ROOT; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileCircle.swift; path = Foundations/Components/ProfileCircle.swift; sourceTree = SOURCE_ROOT; };
 		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
@@ -111,8 +115,10 @@
 		EA00E06A29CC947D00C55FB6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B261A26F29DDE81400326C72 /* DynamicsCards.swift */,
+				B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */,
+				B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */,
 				B2BA675F29DC9EB9008C32A9 /* CardView.swift */,
-				B2BA675D29DC9EAA008C32A9 /* ModalView.swift */,
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
 				EA36AC8229D6002700E40954 /* CustomText.swift */,
@@ -141,7 +147,7 @@
 		EA39B37C29CC9D5700B3861C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				B2BA675B29DC9E6A008C32A9 /* DynamicsView.swift */,
+				B25DC1BE29E72F0800088D62 /* Dynamics.swift */,
 				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
 				EAA1CB2929D3684300A0BDF0 /* Profile.swift */,
 			);
@@ -350,17 +356,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */,
 				EAE4051029C0BE3E00308527 /* ContentView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
-				B2BA675E29DC9EAA008C32A9 /* ModalView.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
+				B28D8C8329DDEC4D00E9CC61 /* DynamicsCardsScroll.swift in Sources */,
 				EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */,
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
+				B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */,
 				EA36AC8329D6002700E40954 /* CustomText.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,
-				B2BA675C29DC9E6A008C32A9 /* DynamicsView.swift in Sources */,
+				B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

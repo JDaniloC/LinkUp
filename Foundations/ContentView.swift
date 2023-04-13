@@ -34,7 +34,7 @@ struct ContentView: View {
                         optionToVerify: Tabs.relationships)
                 }
                 .tag(Tabs.relationships)
-            AdvancedSettingsView()
+            Dynamics()
                 .tabItem() {
                     renderTagIcon(
                         label: "Dinâmicas",
