@@ -26,6 +26,8 @@ struct ContentView: View {
     @StateObject private var profileVM = ProfileViewModel()
     @StateObject private var relationVM = ProfileViewModel()
     @StateObject var relationsVM = RelationshipsViewModel()
+        
+        
     @State private var selection: Tabs = Tabs.relationships;
     
     var body: some View {
