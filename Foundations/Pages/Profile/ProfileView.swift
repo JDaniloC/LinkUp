@@ -11,7 +11,6 @@ import SwiftUI
 struct ProfileView: View {
     public var pageName: String = "Meu Perfil"
     @EnvironmentObject var viewModel: ProfileViewModel
-
     var body: some View {
         VStack {
             Text(pageName)

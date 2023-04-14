@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
+		79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA59029E847E0007FA30A /* CreateCard.swift */; };
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
 		EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */; };
 		EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
+		79EAA59029E847E0007FA30A /* CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCard.swift; sourceTree = "<group>"; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
 		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
 		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79EAA58F29E847AC007FA30A /* CreateCard */ = {
+			isa = PBXGroup;
+			children = (
+				79EAA59029E847E0007FA30A /* CreateCard.swift */,
+			);
+			path = CreateCard;
+			sourceTree = "<group>";
+		};
 		EA00E06A29CC947D00C55FB6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		EA39B37C29CC9D5700B3861C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				79EAA58F29E847AC007FA30A /* CreateCard */,
 				EA0C57C629E6F79A00A8D1F3 /* Relationships */,
 				EA5DE93829DDE2A00048BC43 /* Profile */,
 			);
@@ -385,6 +396,7 @@
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
 				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */,
+				79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */,
 				EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,
