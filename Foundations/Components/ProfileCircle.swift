@@ -33,7 +33,7 @@ struct ProfileCircle: View {
                         lineWidth: radius / 10
                     )
             ).frame(width: radius, height: radius)
-             .padding(.bottom)
+             .padding(.bottom, radius / 20)
             
             if (profileName != "") {
                 Text(profileName)

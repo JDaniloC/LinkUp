@@ -41,4 +41,51 @@ final class RelationshipsViewModel: ObservableObject {
             feedbacks: []
         )
     ]
+    
+    @Published var nodes: [Node] = []
+    
+    init() {
+        self.getPositions()
+    }
+    
+    func setRelationships(newRelationships: [Profile]) {
+        self.relationships = newRelationships
+        getPositions()
+    }
+    
+    func getRelationByNode(node: Node) -> Profile {
+        for relation in relationships {
+            if (node.name == relation.name) {
+                return relation
+            }
+        }
+        return relationships[0]
+    }
+    
+    func getPositions() {
+        var nodes: [Node] = []
+        let center: CGPoint = CGPoint(x: 0.5, y: 0.5)
+        
+        let angle = 2 * Double.pi / Double(relationships.count)
+        for i in 0..<relationships.count {
+            var x = 0.5 * cos(angle * Double(i)) + center.x
+            var y = 0.5 * sin(angle * Double(i)) + center.y
+            
+            let newDistance = Double.random(in: 0.8...1)
+            let d = sqrt(pow(center.x - x, 2) +
+                         pow(center.y - y, 2))
+            x = x + (newDistance / d) * (center.x - x)
+            y = y + (newDistance / d) * (center.y - y)
+            
+            let relation = relationships[i];
+            let node: Node = Node(
+                id: UUID(),
+                name: relation.name,
+                image: relation.image,
+                position: CGPoint(x: x, y: y)
+            )
+            nodes.append(node)
+        }
+        self.nodes = nodes
+    }
 }

@@ -11,7 +11,25 @@ struct RelationshipsView: View {
     @EnvironmentObject var profileVM: ProfileViewModel
     @ObservedObject var relationsVM: RelationshipsViewModel
     @State var navPath: NavigationPath = .init()
-
+    
+    func navigate(node: Node) {
+        let profile = relationsVM.getRelationByNode(node: node)
+        profileVM.setProfileData(newProfile: profile)
+        navPath.removeLast(navPath.count)
+        navPath.append(profile)
+    }
+    
+    func getPosition(
+        geometry: GeometryProxy,
+        position: CGPoint
+    ) -> CGPoint {
+        let size = geometry.size
+        return CGPoint(
+            x: position.x * size.width,
+            y: position.y * size.height + 10
+        )
+    }
+    
     var body: some View {
         NavigationStack(path: $navPath) {
             VStack {
@@ -20,19 +38,42 @@ struct RelationshipsView: View {
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding(30)
-
-                ForEach(relationsVM.relationships,
-                        id: \.self.id) { profile in
-                    NavigationLink(value: profile) {
-                        ProfileCircle(profile.image,
-                                      profileName: profile.name)
-                        .onTapGesture {
-                            profileVM.setProfileData(
-                                newProfile: profile)
-                            navPath.append(profile)
-                        }
+                ZStack {
+                    ForEach(relationsVM.nodes) { n in
+                        EdgeShape(start: CGPoint(x: 0.5,
+                                                 y: 0.5),
+                                  end: CGPoint(
+                                    x: n.position.x,
+                                    y: n.position.y))
+                        .stroke(Color("line-color"),
+                                lineWidth: 2)
+                        .shadow(radius: 1)
                     }
-                }
+                    GeometryReader { geometry in
+                        ForEach(relationsVM.nodes) { node in
+                            ProfileCircle(node.image,
+                                profileName: node.name,
+                                radius: 60
+                            )
+                            .position(getPosition(
+                                geometry: geometry,
+                                position: node.position
+                            ))
+                            .onTapGesture {
+                                self.navigate(node: node)
+                            }
+                        }
+                        ProfileCircle("profile",
+                            profileName: "Sofia",
+                            radius: 60
+                        ).position(getPosition(
+                            geometry: geometry,
+                            position: CGPoint(x: 0.5, y: 0.5)
+                        ))
+                    }.onTapGesture {
+                        print("Clicou no geometryReader")
+                    }
+                }.padding(40)
                 Spacer()
             }
             .navigationTitle("Minhas conexões")
