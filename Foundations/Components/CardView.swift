@@ -11,12 +11,14 @@ class CardInformation: Identifiable {
     var id = UUID()
     var name: String
     var description: String
+    var isConcluded: Bool
     let participants: [String]
     private var _offset: CGSize = .zero
     
     init(name: String, description: String, photos: [String]) {
         self.name = name
         self.description = description
+        self.isConcluded = false
         self.participants = photos
     }
     
@@ -36,6 +38,7 @@ struct CardView: View {
 
     @State private var offset = CGSize.zero
     @State private var isModalOpen = false
+    @State private var isConcluded = false
 
     var body: some View {
         ZStack {
@@ -49,7 +52,10 @@ struct CardView: View {
                     ),
                     startPoint: .top, endPoint: .bottom
                  ))
-                .frame(width: 380, height: 250)
+                .frame(width: 350, height: 235)
+                .onTapGesture {
+                    isModalOpen.toggle()
+                }
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color(red: 255/255, green: 244/255, blue: 228/255), lineWidth: 5)
@@ -59,18 +65,18 @@ struct CardView: View {
                 Text(card.name)
                     .font(.title)
                     .foregroundColor(Color(red: 90/255, green: 90/255, blue: 90/255))
-                
-                Button {
-                    isModalOpen.toggle()
-                } label: {
-                    Image(systemName: "chevron.right")
-                }
-                .dynamicTypeSize(.xxxLarge)
-                .offset(x: 140, y: 70)
             }
             .fullScreenCover(isPresented: $isModalOpen) {
-                DynamicDescriptionPage(isModalOpen: $isModalOpen, title: card.name, description: card.description, photos: card.participants)
+                DynamicDescriptionPage(isModalOpen: $isModalOpen, isConcluded: $isConcluded, title: card.name, description: card.description, photos: card.participants)
             }
+            .onDisappear(perform: {card.isConcluded = isConcluded})
+            //card.isConcluded = isConcluded
+        }
+    }
+    
+    func concluded() {
+        if isConcluded {
+            card.isConcluded = true
         }
     }
 }

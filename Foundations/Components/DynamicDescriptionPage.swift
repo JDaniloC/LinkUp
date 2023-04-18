@@ -9,13 +9,13 @@ import SwiftUI
 
 struct DynamicDescriptionPage: View {
     @Binding var isModalOpen: Bool
+    @Binding var isConcluded: Bool
     var title: String = "Title"
     var description: String = "descrição default da verdade ou mentira Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     var photos: [String] = ["profile"]
     
     var body: some View {
         VStack {
-            
             HStack {
                 Button(action: {
                     isModalOpen.toggle()
@@ -26,21 +26,21 @@ struct DynamicDescriptionPage: View {
                 .padding(.leading)
                 Spacer()
             }
-            
+
             Text(title)
                 .font(.largeTitle)
                 .padding(.top, 80)
             
             Spacer()
-            
+
             VStack(alignment: .leading, spacing: 20) {
                 Text("Descrição")
                     .font(.title)
                 Text(description)
-                
+
                 Text("Participam da dinâmica")
                     .font(.title)
-                HStack(alignment: .top) {
+                HStack {
                     ForEach(photos, id: \.self) {photo in
                         ProfileCircle(photo, radius: 50)
                     }
@@ -48,9 +48,10 @@ struct DynamicDescriptionPage: View {
             }
             .padding()
             Spacer()
-            
+
             Button(action: {
-                print("hii")
+                isModalOpen.toggle()
+                isConcluded = true
             }, label: {
                 Text("Concluir")
                     .padding([.bottom, .top], 8)
