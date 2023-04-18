@@ -38,7 +38,7 @@ struct ContentView: View {
                 }
                 .tag(Tabs.relationships)
                 .environmentObject(relationVM)
-            AdvancedSettingsView()
+            Dynamics()
                 .tabItem() {
                     renderTagIcon(
                         label: "Dinâmicas",
