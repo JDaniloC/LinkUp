@@ -27,7 +27,7 @@ struct ProfileView: View {
                             destination: CreateCard()){
                                 NewCardButton()
                             }
-//                        
+//
                         ProfileCardGrid()
                         
                         

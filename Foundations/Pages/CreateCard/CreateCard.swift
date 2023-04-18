@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CreateCard: View {
     let placeholdString = "Digite alguma coisa..." //how to set this constant content in cardContext?
@@ -13,6 +14,9 @@ struct CreateCard: View {
     @State private var cardTitle: String = ""
     @State private var cardText: String = "Digite alguma coisa..."
     
+     func hideKeyBoard(){
+         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+     }
     
     var body: some View{
         ZStack(alignment: .topLeading){
@@ -20,19 +24,21 @@ struct CreateCard: View {
             VStack(){
                 HStack(alignment: .center){
                     Button{
+                        hideKeyBoard()
                     } label: {
                         Image(systemName: "keyboard.chevron.compact.down")
                     }
                     .padding()
                     Spacer()
                     Button("Salvar", action:{
+                        
                     })
                     .padding()
                    
                 }
                 TextField("Título", text: $cardTitle)
                     .font(.system(size:36, weight:.bold, design: .default))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
                     
                 
@@ -70,10 +76,10 @@ struct CreateCard: View {
 }
 
 
-#if canImport(UIkit)
-extension View{
-    func hideKeyBoard(){
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-#endif
+//#if canImport(UIkit)
+//extension View{
+//   public func hideKeyBoard(){
+//        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//    }
+//}
+//#endif
