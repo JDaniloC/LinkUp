@@ -14,7 +14,7 @@ class CardsList: ObservableObject {
         CardInformation(name: "Compartilhando Histórias", description: "descrição default compartilhando histórias", photos: ["name"]),
         CardInformation(name: "Resolvendo Conflitos", description: "descrição default resolvendo comflitos", photos: ["name"]),
         CardInformation(name: "Ilha Deserta", description: "descrição default da ilha deserta", photos: ["name"])
-    ].reversed()
+    ].filter{!$0.isConcluded}.reversed()
 
     func add(card: CardInformation) {
         self.cards.insert(card, at: 0)
@@ -55,7 +55,7 @@ struct DynamicsCards: View {
                 CardView(card: card)
                     .offset(card.offset)
                     .offset(y: infos.index < 3 ? CGFloat(infos.index) * -45.0 : CGFloat(2) * -45.0)
-                    .gesture(
+                    .highPriorityGesture(
                         DragGesture()
                             .onChanged { value in
                                 viewModel.setCardOffset(

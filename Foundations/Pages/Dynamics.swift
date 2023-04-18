@@ -11,7 +11,11 @@ struct Dynamics: View {
     @State var scrollView: Bool = false
     
     var body: some View {
-        VStack {
+        VStack() {
+            DynamicsProgress()
+            
+            Spacer()
+
             if !scrollView {
                 DynamicsCards()
                 Button(
@@ -25,6 +29,9 @@ struct Dynamics: View {
             } else {
                 DynamicsCardsScroll()
             }
+            
+            Spacer()
+            Spacer()
         }
         .onAppear(perform: {restartValue()})
     }

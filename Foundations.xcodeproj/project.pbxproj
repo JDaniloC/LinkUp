@@ -11,6 +11,7 @@
 		B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */; };
 		B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25DC1BE29E72F0800088D62 /* Dynamics.swift */; };
 		B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261A26F29DDE81400326C72 /* DynamicsCards.swift */; };
+		B27A26A729EEC96E004955ED /* DynamicsProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A26A629EEC96E004955ED /* DynamicsProgress.swift */; };
 		B28D8C8329DDEC4D00E9CC61 /* DynamicsCardsScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */; };
 		B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA675F29DC9EB9008C32A9 /* CardView.swift */; };
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
@@ -64,6 +65,7 @@
 		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
 		B25DC1BE29E72F0800088D62 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
 		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
+		B27A26A629EEC96E004955ED /* DynamicsProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsProgress.swift; sourceTree = "<group>"; };
 		B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCardsScroll.swift; sourceTree = "<group>"; };
 		B2BA675F29DC9EB9008C32A9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Foundations/Components/CardView.swift; sourceTree = SOURCE_ROOT; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		EA00E06A29CC947D00C55FB6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B27A26A629EEC96E004955ED /* DynamicsProgress.swift */,
 				B261A26F29DDE81400326C72 /* DynamicsCards.swift */,
 				B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */,
 				B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */,
@@ -415,6 +418,7 @@
 				EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */,
 				65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */,
 				B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */,
+				B27A26A729EEC96E004955ED /* DynamicsProgress.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,
 				B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */,
 			);
@@ -503,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -575,6 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Foundations/Preview Content\"";
+				DEVELOPMENT_TEAM = 3688KH35TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foundations/Info.plist;
@@ -604,6 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Foundations/Preview Content\"";
+				DEVELOPMENT_TEAM = 3688KH35TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foundations/Info.plist;
