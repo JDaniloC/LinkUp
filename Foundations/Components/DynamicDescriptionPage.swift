@@ -15,7 +15,6 @@ struct DynamicDescriptionPage: View {
     
     var body: some View {
         VStack {
-            
             HStack {
                 Button(action: {
                     isModalOpen.toggle()
@@ -28,33 +27,31 @@ struct DynamicDescriptionPage: View {
             }
             
             Text(title)
-                .font(.largeTitle)
+                .font(.inter(.semibold, size: 35))
                 .padding(.top, 80)
-            
+
             Spacer()
-            
             VStack(alignment: .leading, spacing: 20) {
-                Text("Descrição")
-                    .font(.title)
+                Text("Descrição").font(.inter(.medium))
                 Text(description)
+                    .font(.inter(.regular, size: 17))
                 
                 Text("Participam da dinâmica")
-                    .font(.title)
+                    .font(.inter(.medium))
                 HStack(alignment: .top) {
                     ForEach(photos, id: \.self) {photo in
                         ProfileCircle(photo, radius: 50)
                     }
                 }
-            }
-            .padding()
+            }.padding()
             Spacer()
             
             Button(action: {
                 print("hii")
             }, label: {
                 Text("Concluir")
-                    .padding([.bottom, .top], 8)
-                    .padding([.leading, .trailing], 140)
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 140)
             })
             .padding(.bottom)
             .buttonStyle(.borderedProminent)
@@ -62,7 +59,7 @@ struct DynamicDescriptionPage: View {
         .background(LinearGradient(
             gradient: Gradient(
                 colors: [
-                    Color(red: 255/255, green: 233/255, blue: 204/255),
+                    Color("card-color"),
                     .white, .white, .white, .white
                 ]
             ),

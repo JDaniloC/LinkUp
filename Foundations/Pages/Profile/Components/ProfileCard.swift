@@ -16,8 +16,7 @@ struct ProfileCard<Content: View>: View {
             Text(title)
                 .foregroundColor(
                     Color("black-color"))
-                .font(.custom("Inter-Bold",
-                              size: 17))
+                .font(.inter(.bold, size: 17))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)
             Spacer()
@@ -58,8 +57,7 @@ struct ProfileCard_Previews: PreviewProvider {
             Text("Alguma coisa")
                 .foregroundColor(
                     Color("black-color"))
-                .font(.custom("Inter-Regular",
-                              size: 15))
+                .font(.inter(.regular, size: 15))
         }
     }
 }

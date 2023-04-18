@@ -21,9 +21,8 @@ struct ProfileCardView<Content: View>: View {
         ScrollView(showsIndicators: false) {
             VStack {
                 Text(title)
-                    .font(.custom("Inter-Bold",
-                                  size: 30)
-                    ).padding(.vertical, 40)
+                    .font(.inter(.bold, size: 30))
+                    .padding(.vertical, 40)
                 content.padding()
             }.frame(maxWidth: .infinity)
         }.background(LinearGradient(

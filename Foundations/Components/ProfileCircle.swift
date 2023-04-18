@@ -37,8 +37,7 @@ struct ProfileCircle: View {
             
             if (profileName != "") {
                 Text(profileName)
-                    .font(.custom("Inter-Regular",
-                                  size: 13))
+                    .font(.inter(.regular, size: 13))
                     .foregroundColor(.black)
                     .fontWeight(.light)
             }

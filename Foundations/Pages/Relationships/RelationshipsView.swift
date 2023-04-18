@@ -34,7 +34,7 @@ struct RelationshipsView: View {
         NavigationStack(path: $navPath) {
             VStack {
                 Text("Veja as pessoas de sua equipe que você já trabalhou e quais ainda precisa conhecer melhor")
-                    .font(.custom("Inter-Light", size: 16))
+                    .font(.inter(.light, size: 16))
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding(30)
@@ -70,11 +70,8 @@ struct RelationshipsView: View {
                             geometry: geometry,
                             position: CGPoint(x: 0.5, y: 0.5)
                         ))
-                    }.onTapGesture {
-                        print("Clicou no geometryReader")
                     }
                 }.padding(40)
-                Spacer()
             }
             .navigationTitle("Minhas conexões")
             .navigationBarTitleDisplayMode(.inline)

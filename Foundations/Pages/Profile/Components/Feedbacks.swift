@@ -22,8 +22,9 @@ struct Feedbacks: View {
                         radius: 86
                     )
                     Text(datum.text)
-                        .foregroundColor(Color("black-color"))
-                        .font(.custom("Inter-Regular", size: 14))
+                        .foregroundColor(
+                            Color("black-color"))
+                        .font(.inter(.regular, size: 14))
                 }.padding(.vertical, 3)
             }
         }.padding(.horizontal, 10)

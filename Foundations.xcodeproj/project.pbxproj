@@ -30,7 +30,7 @@
 		EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */; };
 		EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */; };
 		EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */; };
-		EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */; };
+		EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64C52E29EF284A002D6877 /* StyledFonts.swift */; };
 		EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2929D3684300A0BDF0 /* Profile.swift */; };
 		EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */; };
 		EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */; };
@@ -61,14 +61,14 @@
 
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
-		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
-		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
-		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
 		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
 		B25DC1BE29E72F0800088D62 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
 		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
 		B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCardsScroll.swift; sourceTree = "<group>"; };
 		B2BA675F29DC9EB9008C32A9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Foundations/Components/CardView.swift; sourceTree = SOURCE_ROOT; };
+		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
+		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
+		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
 		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "Foundations/Fonts/Inter-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "Foundations/Fonts/Inter-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
@@ -84,7 +84,7 @@
 		EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardGrid.swift; sourceTree = "<group>"; };
-		EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
+		EA64C52E29EF284A002D6877 /* StyledFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledFonts.swift; sourceTree = "<group>"; };
 		EAA1CB2929D3684300A0BDF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 		EAE4050A29C0BE3E00308527 /* Foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foundations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +132,7 @@
 				B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */,
 				B2BA675F29DC9EB9008C32A9 /* CardView.swift */,
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
-				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
+				EA64C52E29EF284A002D6877 /* StyledFonts.swift */,
 			);
 			name = Components;
 			path = Foundations/Components;
@@ -191,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				65FF062D29E1C08E0057C938 /* Feedbacks.swift */,
+				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
 				EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */,
 				EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */,
 			);
@@ -227,7 +228,6 @@
 				EA00E06A29CC947D00C55FB6 /* Components */,
 				EAE4051329C0BE4300308527 /* Preview Content */,
 				EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */,
-				EA658AF829C9EAE2003E20B7 /* AdvancedSettingsView.swift */,
 				EAE4050F29C0BE3E00308527 /* ContentView.swift */,
 			);
 			path = Foundations;
@@ -403,7 +403,6 @@
 				EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */,
 				EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
-				EA658AF929C9EAE2003E20B7 /* AdvancedSettingsView.swift in Sources */,
 				EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */,
 				EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
@@ -413,6 +412,7 @@
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
 				EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */,
 				EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */,
+				EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */,
 				65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */,
 				B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,

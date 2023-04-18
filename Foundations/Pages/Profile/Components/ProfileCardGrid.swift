@@ -33,8 +33,7 @@ struct ProfileCardGrid: View {
                             .multilineTextAlignment(.leading)
                             .foregroundColor(
                                 Color("black-color"))
-                            .font(.custom("Inter-Regular",
-                                          size: 15))
+                            .font(.inter(.regular, size: 15))
                     }
                 }
             }
@@ -45,8 +44,7 @@ struct ProfileCardGrid: View {
                      Feedbacks()
                  } else {
                      Text(viewModel.textCardInfo.text)
-                         .font(.custom("Inter-Regular",
-                                       size: 20))
+                         .font(.inter(.regular, size: 20))
                          .padding(.horizontal, 20)
                  }
              }.presentationDragIndicator(.hidden)
