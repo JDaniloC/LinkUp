@@ -23,6 +23,15 @@ struct ProfileView: View {
                         .padding(.top, 50)
                     Text(viewModel.profile.name)
                     Text(viewModel.profile.status)
+                    if pageName != "Meu Perfil" {
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("Criar Conexão")
+                                .padding(5)
+                        })
+                        .buttonStyle(.borderedProminent)
+                    }
                     Button(action: {
                         
                     }) {
@@ -41,9 +50,9 @@ struct ProfileView: View {
 
 }
 
-struct Profile_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var profileVM = ProfileViewModel()
-        ProfileView().environmentObject(profileVM)
-    }
-}
+//struct Profile_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @StateObject var profileVM = ProfileViewModel()
+//        ProfileView().environmentObject(profileVM)
+//    }
+//}

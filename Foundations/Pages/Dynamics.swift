@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Dynamics: View {
     @State var scrollView: Bool = false
+    @StateObject var viewModel: CardsList = CardsList()
     
     var body: some View {
         VStack() {
@@ -33,11 +34,8 @@ struct Dynamics: View {
             Spacer()
             Spacer()
         }
-        .onAppear(perform: {restartValue()})
-    }
-    
-    func restartValue() {
-        scrollView = false
+        .onAppear(perform: {scrollView = false})
+        .environmentObject(viewModel)
     }
 }
 

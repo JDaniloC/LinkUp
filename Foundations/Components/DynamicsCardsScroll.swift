@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct DynamicsCardsScroll: View {
-    var viewModel: CardsList = CardsList()
+    @EnvironmentObject var viewModel: CardsList
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                ForEach(viewModel.cards) { card in
+                ForEach(viewModel.cards.reversed()) { card in
                     CardView(card: card)
                         .padding(5)
                 }

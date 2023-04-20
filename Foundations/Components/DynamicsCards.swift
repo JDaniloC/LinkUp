@@ -46,15 +46,16 @@ class CardsList: ObservableObject {
 
 
 struct DynamicsCards: View {
-    @StateObject var viewModel: CardsList = CardsList()
+    @EnvironmentObject var viewModel: CardsList
     
     var body: some View {
         ZStack {
             ForEach(viewModel.cards) { card in
                 let infos = viewModel.getCardNIndex(cardID: card.id)
-                CardView(card: card)
+                CardView(card: card)//.updateSize(width: 50, height: 100)
                     .offset(card.offset)
                     .offset(y: infos.index < 3 ? CGFloat(infos.index) * -45.0 : CGFloat(2) * -45.0)
+                    .rotationEffect(.degrees(Double(card.offset.width / 10)))
                     .highPriorityGesture(
                         DragGesture()
                             .onChanged { value in
@@ -71,6 +72,9 @@ struct DynamicsCards: View {
                                         viewModel.add(card: infos.selectedCard)
                                     }
                                     viewModel.setCardOffset(cardID: card.id, newOffset: .zero)
+                                    if card.isConcluded {
+                                        viewModel.remove(index: infos.index)
+                                    }
                                 }
                             }
                     )
@@ -80,8 +84,8 @@ struct DynamicsCards: View {
     }
 }
 
-struct DynamicsCards_Previews: PreviewProvider {
-    static var previews: some View {
-        DynamicsCards()
-    }
-}
+//struct DynamicsCards_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DynamicsCards()
+//    }
+//}

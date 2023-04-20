@@ -39,6 +39,10 @@ struct CardView: View {
     @State private var offset = CGSize.zero
     @State private var isModalOpen = false
     @State private var isConcluded = false
+    @EnvironmentObject var viewModel: CardsList
+    
+    @State var width: CGFloat = 350
+    @State var height: CGFloat = 235
 
     var body: some View {
         ZStack {
@@ -46,19 +50,19 @@ struct CardView: View {
                 .fill(LinearGradient(
                     gradient: Gradient(
                         colors: [
-                            Color(red: 255/255, green: 233/255, blue: 204/255),
+                            Color("card-color"),
                             .white
                         ]
                     ),
                     startPoint: .top, endPoint: .bottom
                  ))
-                .frame(width: 350, height: 235)
+                .frame(width: width, height: height)
                 .onTapGesture {
                     isModalOpen.toggle()
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color(red: 255/255, green: 244/255, blue: 228/255), lineWidth: 5)
+                        .stroke(Color("light-yellow"), lineWidth: 5)
                 )
 
             VStack {
@@ -68,15 +72,18 @@ struct CardView: View {
             }
             .fullScreenCover(isPresented: $isModalOpen) {
                 DynamicDescriptionPage(isModalOpen: $isModalOpen, isConcluded: $isConcluded, title: card.name, description: card.description, photos: card.participants)
+                    .onDisappear(perform: {
+                        card.isConcluded = isConcluded
+                        viewModel.cards = viewModel.cards.filter{!$0.isConcluded}
+                    })
             }
-            .onDisappear(perform: {card.isConcluded = isConcluded})
-            //card.isConcluded = isConcluded
         }
     }
     
-    func concluded() {
-        if isConcluded {
-            card.isConcluded = true
+    mutating func updateSize(width: CGFloat, height: CGFloat) {
+        if width != CGFloat(0) {
+            self.width = width
+            self.height = height
         }
     }
 }

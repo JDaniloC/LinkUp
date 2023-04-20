@@ -89,11 +89,11 @@ struct RelationshipsView: View {
     }
 }
 
-struct RelationshipsView_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var profileVM = ProfileViewModel()
-        @StateObject var relationsVM = RelationshipsViewModel()
-        RelationshipsView(relationsVM: relationsVM)
-            .environmentObject(profileVM)
-    }
-}
+//struct RelationshipsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @StateObject var profileVM = ProfileViewModel()
+//        @StateObject var relationsVM = RelationshipsViewModel()
+//        RelationshipsView(relationsVM: relationsVM)
+//            .environmentObject(profileVM)
+//    }
+//}

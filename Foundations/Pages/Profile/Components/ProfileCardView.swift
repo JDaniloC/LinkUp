@@ -28,8 +28,8 @@ struct ProfileCardView<Content: View>: View {
         }.background(LinearGradient(
             gradient: Gradient(
                 colors: [
-                    .white,
-                    Color("light-yellow")
+                    Color("light-yellow"),
+                    .white, .white, .white
                 ]
             ),
             startPoint: .top, endPoint: .bottom
@@ -37,12 +37,12 @@ struct ProfileCardView<Content: View>: View {
     }
 }
 
-struct ProfileCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        @State var titleCard: String = "Título do card"
-
-        ProfileCardView($titleCard) {
-            Text("Texto dentro do card")
-        }
-    }
-}
+//struct ProfileCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @State var titleCard: String = "Título do card"
+//
+//        ProfileCardView($titleCard) {
+//            Text("Texto dentro do card")
+//        }
+//    }
+//}

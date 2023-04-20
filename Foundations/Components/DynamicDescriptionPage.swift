@@ -69,13 +69,13 @@ struct DynamicDescriptionPage: View {
         ))
     }
 }
-struct DynamicDescriptionPage_Previews: PreviewProvider {
-    static var previews: some View {
-        @State var isModalOpen: Bool = false
-        @State var isConcluded: Bool = false
-        DynamicDescriptionPage(
-            isModalOpen: $isModalOpen,
-            isConcluded: $isConcluded
-        )
-    }
-}
+//struct DynamicDescriptionPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @State var isModalOpen: Bool = false
+//        @State var isConcluded: Bool = false
+//        DynamicDescriptionPage(
+//            isModalOpen: $isModalOpen,
+//            isConcluded: $isConcluded
+//        )
+//    }
+//}
