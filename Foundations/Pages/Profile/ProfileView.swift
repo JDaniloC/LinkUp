@@ -11,8 +11,13 @@ import SwiftUI
 struct ProfileView: View {
     public var pageName: String = "Meu Perfil"
     @State private var creatingNewCard = false
-    @EnvironmentObject var viewModel: ProfileViewModel
+    @EnvironmentObject var profileVM: ProfileViewModel
+    @EnvironmentObject var navigationVM: NavigationViewModel
 
+    func navigateToDynamics() {
+        navigationVM.setSelectedTab(navigateTo: Tabs.dynamics)
+    }
+    
     var body: some View {
         VStack {
             Text(pageName)
@@ -20,10 +25,10 @@ struct ProfileView: View {
                 .bold()
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    ProfileCircle(viewModel.profile.image)
+                    ProfileCircle(profileVM.profile.image)
                         .padding(.top, 50)
-                    Text(viewModel.profile.name)
-                    Text(viewModel.profile.status)
+                    Text(profileVM.profile.name)
+                    Text(profileVM.profile.status)
                     
                     if pageName == "Meu Perfil" {
                         Button(action: {
@@ -36,6 +41,14 @@ struct ProfileView: View {
                                        alignment: .leading)
                         }.buttonStyle(.bordered)
                             .padding(.horizontal, 30)
+                    } else {
+                        Button(action: {
+                            navigateToDynamics()
+                        }, label: {
+                            Text("Melhorar Conexão")
+                                .padding(5)
+                        })
+                        .buttonStyle(.borderedProminent)
                     }
                     ProfileCardGrid()
                 }
@@ -50,6 +63,9 @@ struct ProfileView: View {
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         @StateObject var profileVM = ProfileViewModel()
-        ProfileView().environmentObject(profileVM)
+        @StateObject var navigationVM = NavigationViewModel()
+        ProfileView()
+            .environmentObject(profileVM)
+            .environmentObject(navigationVM)
     }
 }

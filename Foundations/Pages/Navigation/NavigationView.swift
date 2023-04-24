@@ -1,35 +1,20 @@
 //
-//  ContentView.swift
+//  NavigationView.swift
 //  Foundations
 //
-//  Created by José Danilo Silva do Carmo on 14/03/23.
+//  Created by José Danilo Silva do Carmo on 24/04/23.
 //
 
 import SwiftUI
 
-enum Tabs: CaseIterable {
-    case relationships, dynamics, profile
-
-    var icon: String {
-        switch (self) {
-            case .relationships:
-                return "team-icon"
-            case .dynamics:
-                return "dynamics-icon"
-            case .profile:
-                return "person-icon"
-        }
-    }
-}
-
-struct ContentView: View {
+struct NavigationView: View {
     @StateObject private var profileVM = ProfileViewModel()
     @StateObject private var relationVM = ProfileViewModel()
     @StateObject var relationsVM = RelationshipsViewModel()
-    @State private var selection: Tabs = Tabs.relationships;
-    
+    @StateObject var navigationVM = NavigationViewModel()
+
     var body: some View {
-        TabView(selection: $selection) {
+        TabView(selection: $navigationVM.selectedTab) {
             RelationshipsView(relationsVM: relationsVM)
                 .tabItem() {
                     renderTagIcon(
@@ -38,6 +23,8 @@ struct ContentView: View {
                 }
                 .tag(Tabs.relationships)
                 .environmentObject(relationVM)
+                .environmentObject(navigationVM)
+
             Dynamics()
                 .tabItem() {
                     renderTagIcon(
@@ -45,6 +32,7 @@ struct ContentView: View {
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
+
             ProfileView()
                 .tabItem() {
                     renderTagIcon(
@@ -55,13 +43,14 @@ struct ContentView: View {
                 .environmentObject(profileVM)
         }
     }
-    
+
+
     private func renderTagIcon(
         label: String,
         optionToVerify option: Tabs
     ) -> some View {
         VStack {
-            let isSelected = selection == option;
+            let isSelected = navigationVM.selectedTab == option;
             let iconName: String = option.icon;
             Image(isSelected ? "selected-\(iconName)": iconName)
             Text(label)
@@ -69,8 +58,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView()
     }
 }

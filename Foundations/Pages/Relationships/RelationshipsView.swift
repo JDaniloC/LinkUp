@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RelationshipsView: View {
+    // ProfileView View Child needs NavigationViewModel
     @EnvironmentObject var profileVM: ProfileViewModel
     @ObservedObject var relationsVM: RelationshipsViewModel
     @State var navPath: NavigationPath = .init()
@@ -93,7 +94,10 @@ struct RelationshipsView_Previews: PreviewProvider {
     static var previews: some View {
         @StateObject var profileVM = ProfileViewModel()
         @StateObject var relationsVM = RelationshipsViewModel()
+        @StateObject var navigationVM = NavigationViewModel()
+
         RelationshipsView(relationsVM: relationsVM)
             .environmentObject(profileVM)
+            .environmentObject(navigationVM)
     }
 }
