@@ -25,15 +25,7 @@ struct ProfileCardView<Content: View>: View {
                     .padding(.vertical, 40)
                 content.padding()
             }.frame(maxWidth: .infinity)
-        }.background(LinearGradient(
-            gradient: Gradient(
-                colors: [
-                    .white,
-                    Color("light-yellow")
-                ]
-            ),
-            startPoint: .top, endPoint: .bottom
-        ))
+        }.background(GradientBackground())
     }
 }
 

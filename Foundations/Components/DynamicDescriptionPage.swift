@@ -58,15 +58,7 @@ struct DynamicDescriptionPage: View {
             .padding(.bottom)
             .buttonStyle(.borderedProminent)
         }
-        .background(LinearGradient(
-            gradient: Gradient(
-                colors: [
-                    Color("card-color"),
-                    .white, .white, .white, .white
-                ]
-            ),
-            startPoint: .top, endPoint: .bottom
-        ))
+        .background(GradientBackground())
     }
 }
 struct DynamicDescriptionPage_Previews: PreviewProvider {

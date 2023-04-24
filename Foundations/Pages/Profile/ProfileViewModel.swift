@@ -70,4 +70,10 @@ final class ProfileViewModel: ObservableObject {
         textCardInfo.title = card.title
         textCardInfo.text = card.text
     }
+    
+    public func addCard(title: String, text: String) {
+        self.profile.cardList.append(CardInfo(
+            text: text, title: title, description: text
+        ))
+    }
 }

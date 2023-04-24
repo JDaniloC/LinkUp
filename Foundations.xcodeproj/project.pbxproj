@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
+		79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA59029E847E0007FA30A /* CreateCard.swift */; };
 		B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */; };
 		B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25DC1BE29E72F0800088D62 /* Dynamics.swift */; };
 		B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261A26F29DDE81400326C72 /* DynamicsCards.swift */; };
@@ -32,6 +33,7 @@
 		EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */; };
 		EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */; };
 		EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64C52E29EF284A002D6877 /* StyledFonts.swift */; };
+		EA85FFD529F6FC3A00C80012 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */; };
 		EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2929D3684300A0BDF0 /* Profile.swift */; };
 		EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */; };
 		EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4050D29C0BE3E00308527 /* FoundationsApp.swift */; };
@@ -62,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
+		79EAA59029E847E0007FA30A /* CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCard.swift; sourceTree = "<group>"; };
 		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
 		B25DC1BE29E72F0800088D62 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
 		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		EA5DE94029DDE92F0048BC43 /* ProfileCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardGrid.swift; sourceTree = "<group>"; };
 		EA64C52E29EF284A002D6877 /* StyledFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledFonts.swift; sourceTree = "<group>"; };
+		EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		EAA1CB2929D3684300A0BDF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 		EAE4050A29C0BE3E00308527 /* Foundations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foundations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +140,7 @@
 				B2BA675F29DC9EB9008C32A9 /* CardView.swift */,
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EA64C52E29EF284A002D6877 /* StyledFonts.swift */,
+				EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */,
 			);
 			name = Components;
 			path = Foundations/Components;
@@ -193,6 +198,7 @@
 		EA5DE93B29DDE3A50048BC43 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				79EAA59029E847E0007FA30A /* CreateCard.swift */,
 				65FF062D29E1C08E0057C938 /* Feedbacks.swift */,
 				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
 				EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */,
@@ -406,7 +412,9 @@
 				EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */,
 				EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */,
 				EAE4050E29C0BE3E00308527 /* FoundationsApp.swift in Sources */,
+				EA85FFD529F6FC3A00C80012 /* GradientBackground.swift in Sources */,
 				EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */,
+				79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */,
 				EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */,
 				EAA1CB2A29D3684300A0BDF0 /* Profile.swift in Sources */,
 				EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */,

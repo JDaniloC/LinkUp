@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ProfileView: View {
     public var pageName: String = "Meu Perfil"
+    @State private var creatingNewCard = false
     @EnvironmentObject var viewModel: ProfileViewModel
 
     var body: some View {
@@ -23,22 +24,27 @@ struct ProfileView: View {
                         .padding(.top, 50)
                     Text(viewModel.profile.name)
                     Text(viewModel.profile.status)
-                    Button(action: {
-                        
-                    }) {
-                        Text("Novo Card")
-                            .padding(.vertical, 5)
-                            .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity,
-                                   alignment: .leading)
-                    }.buttonStyle(.bordered)
-                        .padding(.horizontal, 30)
+                    
+                    if pageName == "Meu Perfil" {
+                        Button(action: {
+                            creatingNewCard.toggle()
+                        }) {
+                            Text("Novo Card")
+                                .padding(.vertical, 5)
+                                .foregroundColor(.gray)
+                                .frame(maxWidth: .infinity,
+                                       alignment: .leading)
+                        }.buttonStyle(.bordered)
+                            .padding(.horizontal, 30)
+                    }
                     ProfileCardGrid()
                 }
             }
+        }.fullScreenCover(isPresented: $creatingNewCard) {
+            CreateCard(isShowing: $creatingNewCard)
         }
     }
-
+    
 }
 
 struct Profile_Previews: PreviewProvider {
