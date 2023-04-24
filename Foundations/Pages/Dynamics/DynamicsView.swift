@@ -1,15 +1,15 @@
 //
 //  DynamicsView.swift
-//  Dynamics
+//  Foundations
 //
-//  Created by Madu on 30/03/23.
+//  Created by José Danilo Silva do Carmo on 24/04/23.
 //
 
 import SwiftUI
 
-struct Dynamics: View {
+struct DynamicsView: View {
     @State var scrollView: Bool = false
-    @StateObject var viewModel: CardsList = CardsList()
+    @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
     
     var body: some View {
         VStack() {
@@ -39,9 +39,8 @@ struct Dynamics: View {
     }
 }
 
-
-struct Dynamics_Previews: PreviewProvider {
+struct DynamicsView_Previews: PreviewProvider {
     static var previews: some View {
-        Dynamics()
+        DynamicsView()
     }
 }

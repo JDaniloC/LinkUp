@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DynamicsCardsScroll: View {
-    @EnvironmentObject var viewModel: CardsList
+    @EnvironmentObject var viewModel: DynamicsViewModel
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -24,6 +24,7 @@ struct DynamicsCardsScroll: View {
 
 struct DynamicsCardsScroll_Previews: PreviewProvider {
     static var previews: some View {
-        DynamicsCardsScroll()
+        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
+        DynamicsCardsScroll().environmentObject(viewModel)
     }
 }

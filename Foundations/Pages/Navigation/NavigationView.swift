@@ -25,7 +25,7 @@ struct NavigationView: View {
                 .environmentObject(relationVM)
                 .environmentObject(navigationVM)
 
-            Dynamics()
+            DynamicsView()
                 .tabItem() {
                     renderTagIcon(
                         label: "Dinâmicas",

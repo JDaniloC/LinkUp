@@ -7,40 +7,13 @@
 
 import SwiftUI
 
-class CardInformation: Identifiable {
-    var id = UUID()
-    var name: String
-    var description: String
-    var isConcluded: Bool
-    let participants: [String]
-    private var _offset: CGSize = .zero
-    
-    init(name: String, description: String, photos: [String]) {
-        self.name = name
-        self.description = description
-        self.isConcluded = false
-        self.participants = photos
-    }
-    
-    public var offset: CGSize {
-        get {
-            return self._offset
-        }
-        set(newOffset) {
-            self._offset = newOffset
-            
-        }
-    }
-}
-
 struct CardView: View {
     var card: CardInformation
 
+    @EnvironmentObject var viewModel: DynamicsViewModel
     @State private var offset = CGSize.zero
     @State private var isModalOpen = false
     @State private var isConcluded = false
-    @EnvironmentObject var viewModel: CardsList
-    
     @State var width: CGFloat = 350
     @State var height: CGFloat = 235
 
@@ -68,7 +41,11 @@ struct CardView: View {
             VStack {
                 Text(card.name)
                     .font(.title)
-                    .foregroundColor(Color(red: 90/255, green: 90/255, blue: 90/255))
+                    .foregroundColor(Color(
+                        red: 90/255,
+                        green: 90/255,
+                        blue: 90/255
+                    ))
             }
             .fullScreenCover(isPresented: $isModalOpen) {
                 DynamicDescriptionPage(isModalOpen: $isModalOpen, isConcluded: $isConcluded, title: card.name, description: card.description, photos: card.participants)
@@ -90,6 +67,12 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: CardInformation(name: "Trocando Hobbies", description: "default...", photos: ["name"]))
+        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
+
+        CardView(card: CardInformation(
+            name: "Trocando Hobbies",
+            description: "Descrição exemplo do Trocando Hobbies",
+            photos: ["profile"]
+        )).environmentObject(viewModel)
     }
 }

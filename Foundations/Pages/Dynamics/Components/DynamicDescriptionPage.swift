@@ -10,9 +10,9 @@ import SwiftUI
 struct DynamicDescriptionPage: View {
     @Binding var isModalOpen: Bool
     @Binding var isConcluded: Bool
-    var title: String = "Title"
-    var description: String = "descrição default da verdade ou mentira Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    var photos: [String] = ["profile"]
+    var title: String = ""
+    var description: String = ""
+    var photos: [String] = []
     
     var body: some View {
         VStack {
@@ -61,13 +61,17 @@ struct DynamicDescriptionPage: View {
         .background(GradientBackground())
     }
 }
-//struct DynamicDescriptionPage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @State var isModalOpen: Bool = false
-//        @State var isConcluded: Bool = false
-//        DynamicDescriptionPage(
-//            isModalOpen: $isModalOpen,
-//            isConcluded: $isConcluded
-//        )
-//    }
-//}
+
+struct DynamicDescriptionPage_Previews: PreviewProvider {
+    static var previews: some View {
+        @State var isModalOpen: Bool = false
+        @State var isConcluded: Bool = false
+        DynamicDescriptionPage(
+            isModalOpen: $isModalOpen,
+            isConcluded: $isConcluded,
+            title: "Título do card",
+            description: "Descrição do card",
+            photos: ["profile"]
+        )
+    }
+}

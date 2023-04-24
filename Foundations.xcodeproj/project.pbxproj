@@ -18,6 +18,8 @@
 		EA00E06C29CC94AA00C55FB6 /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */; };
 		EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */; };
 		EA0C57C829E6F7B600A8D1F3 /* RelationshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */; };
+		EA0CC08B29F714FC008C7E9D /* DynamicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0CC08A29F714FC008C7E9D /* DynamicsView.swift */; };
+		EA0CC08D29F71535008C7E9D /* DynamicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0CC08C29F71535008C7E9D /* DynamicsViewModel.swift */; };
 		EA36AC7829D5D27D00E40954 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */; };
 		EA36AC7929D5D27D00E40954 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */; };
 		EA36AC7A29D5D27D00E40954 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */; };
@@ -72,10 +74,12 @@
 		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
 		B27A26A629EEC96E004955ED /* DynamicsProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsProgress.swift; sourceTree = "<group>"; };
 		B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCardsScroll.swift; sourceTree = "<group>"; };
-		B2BA675F29DC9EB9008C32A9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Foundations/Components/CardView.swift; sourceTree = SOURCE_ROOT; };
+		B2BA675F29DC9EB9008C32A9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Foundations/Pages/Dynamics/Components/CardView.swift; sourceTree = SOURCE_ROOT; };
 		EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
 		EA0C57C429E6F79300A8D1F3 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
 		EA0C57C729E6F7B600A8D1F3 /* RelationshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsViewModel.swift; sourceTree = "<group>"; };
+		EA0CC08A29F714FC008C7E9D /* DynamicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsView.swift; sourceTree = "<group>"; };
+		EA0CC08C29F71535008C7E9D /* DynamicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsViewModel.swift; sourceTree = "<group>"; };
 		EA36AC6F29D5D27C00E40954 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Thin.ttf"; path = "Foundations/Fonts/Inter-Thin.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7029D5D27D00E40954 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Light.ttf"; path = "Foundations/Fonts/Inter-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC7129D5D27D00E40954 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "Foundations/Fonts/Inter-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
@@ -137,11 +141,6 @@
 		EA00E06A29CC947D00C55FB6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B27A26A629EEC96E004955ED /* DynamicsProgress.swift */,
-				B261A26F29DDE81400326C72 /* DynamicsCards.swift */,
-				B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */,
-				B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */,
-				B2BA675F29DC9EB9008C32A9 /* CardView.swift */,
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EA64C52E29EF284A002D6877 /* StyledFonts.swift */,
 				EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */,
@@ -158,6 +157,29 @@
 				EA39B37D29CC9D6B00B3861C /* Relationships.swift */,
 			);
 			path = Relationships;
+			sourceTree = "<group>";
+		};
+		EA0CC08929F714E5008C7E9D /* Dynamics */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CC08E29F71733008C7E9D /* Components */,
+				B25DC1BE29E72F0800088D62 /* Dynamics.swift */,
+				EA0CC08A29F714FC008C7E9D /* DynamicsView.swift */,
+				EA0CC08C29F71535008C7E9D /* DynamicsViewModel.swift */,
+			);
+			path = Dynamics;
+			sourceTree = "<group>";
+		};
+		EA0CC08E29F71733008C7E9D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA675F29DC9EB9008C32A9 /* CardView.swift */,
+				B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */,
+				B261A26F29DDE81400326C72 /* DynamicsCards.swift */,
+				B28D8C8229DDEC4D00E9CC61 /* DynamicsCardsScroll.swift */,
+				B27A26A629EEC96E004955ED /* DynamicsProgress.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		EA36AC6E29D5D22400E40954 /* Fonts */ = {
@@ -180,10 +202,10 @@
 		EA39B37C29CC9D5700B3861C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				EA0CC08929F714E5008C7E9D /* Dynamics */,
 				EA85FFDA29F70D8F00C80012 /* Navigation */,
 				EA0C57C629E6F79A00A8D1F3 /* Relationships */,
 				EA5DE93829DDE2A00048BC43 /* Profile */,
-				B25DC1BE29E72F0800088D62 /* Dynamics.swift */,
 			);
 			name = Pages;
 			path = Foundations/Pages;
@@ -421,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0CC08D29F71535008C7E9D /* DynamicsViewModel.swift in Sources */,
 				B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */,
 				EA0C57C529E6F79300A8D1F3 /* RelationshipsView.swift in Sources */,
 				EA85FFDC29F70DA000C80012 /* Navigation.swift in Sources */,
@@ -445,6 +468,7 @@
 				EA85FFDE29F70DD800C80012 /* NavigationView.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,
 				B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */,
+				EA0CC08B29F714FC008C7E9D /* DynamicsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
