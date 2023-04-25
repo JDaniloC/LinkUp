@@ -90,14 +90,14 @@ struct RelationshipsView: View {
     }
 }
 
-struct RelationshipsView_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var profileVM = ProfileViewModel()
-        @StateObject var relationsVM = RelationshipsViewModel()
-        @StateObject var navigationVM = NavigationViewModel()
-
-        RelationshipsView(relationsVM: relationsVM)
-            .environmentObject(profileVM)
-            .environmentObject(navigationVM)
-    }
-}
+//struct RelationshipsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @StateObject var profileVM = ProfileViewModel()
+//        @StateObject var relationsVM = RelationshipsViewModel()
+//        @StateObject var navigationVM = NavigationViewModel()
+//
+//        RelationshipsView(relationsVM: relationsVM)
+//            .environmentObject(profileVM)
+//            .environmentObject(navigationVM)
+//    }
+//}

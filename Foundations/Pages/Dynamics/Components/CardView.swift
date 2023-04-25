@@ -65,14 +65,14 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
-
-        CardView(card: CardInformation(
-            name: "Trocando Hobbies",
-            description: "Descrição exemplo do Trocando Hobbies",
-            photos: ["profile"]
-        )).environmentObject(viewModel)
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
+//
+//        CardView(card: CardInformation(
+//            name: "Trocando Hobbies",
+//            description: "Descrição exemplo do Trocando Hobbies",
+//            photos: ["profile"]
+//        )).environmentObject(viewModel)
+//    }
+//}

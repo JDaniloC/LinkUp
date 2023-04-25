@@ -9,6 +9,11 @@
 import SwiftUI
 
 final class ProfileViewModel: ObservableObject {
+    public var isMyProfile: Bool
+    init (_ isMyProfile: Bool = true) {
+        self.isMyProfile = isMyProfile
+    }
+
     @Published var profile: Profile = Profile(
         name: "Alice Diniz",
         image: "profile",
@@ -61,6 +66,10 @@ final class ProfileViewModel: ObservableObject {
     )
     @Published var textCardInfo: TextCardInfo = TextCardInfo(
         title: "", text: "")
+    @Published var textEditInfo: TextCardInfo = TextCardInfo(
+        title: "", text: "Digite alguma coisa...")
+    @Published var creatingNewCard = false
+    @Published var isEditingCard = false
     
     public func setProfileData(newProfile: Profile) {
         self.profile = newProfile
@@ -71,9 +80,23 @@ final class ProfileViewModel: ObservableObject {
         textCardInfo.text = card.text
     }
     
-    public func addCard(title: String, text: String) {
+    public func addCard(card: TextCardInfo) {
         self.profile.cardList.append(CardInfo(
-            text: text, title: title, description: text
+            text: card.text, title: card.title,
+            description: card.text
         ))
+    }
+    
+    public func setEditInfo(title: String, text: String) {
+        self.textEditInfo.title = title
+        self.textEditInfo.text = text
+    }
+    
+    public func toggleCreatingNewCard() {
+        self.creatingNewCard.toggle()
+    }
+    
+    public func setIsEditingCard(newValue: Bool) {
+        self.isEditingCard = newValue
     }
 }

@@ -34,3 +34,4 @@ struct Profile: Hashable, Identifiable {
     var cardList: [CardInfo]
     var feedbacks: [Feedback]
 }
+

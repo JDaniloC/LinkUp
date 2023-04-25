@@ -30,9 +30,9 @@ struct ProfileCardView<Content: View>: View {
 }
 
 struct ProfileCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        @State var titleCard: String = "Título do card"
+    @State static var titleCard: String = "Título do card"
 
+    static var previews: some View {
         ProfileCardView($titleCard) {
             Text("Texto dentro do card")
         }

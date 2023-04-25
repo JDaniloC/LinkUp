@@ -22,9 +22,9 @@ struct DynamicsCardsScroll: View {
     }
 }
 
-struct DynamicsCardsScroll_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
-        DynamicsCardsScroll().environmentObject(viewModel)
-    }
-}
+//struct DynamicsCardsScroll_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
+//        DynamicsCardsScroll().environmentObject(viewModel)
+//    }
+//}
