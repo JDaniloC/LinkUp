@@ -23,10 +23,6 @@ struct ProfileCard<Content: View>: View {
             HStack(alignment: .bottom) {
                 content
                 Spacer()
-                Image(
-                    systemName: "chevron.right"
-                ).foregroundColor(
-                    Color("black-color"))
             }
         }.padding(.all, 20)
         .background(LinearGradient(

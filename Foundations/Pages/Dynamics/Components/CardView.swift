@@ -66,13 +66,13 @@ struct CardView: View {
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
+    @StateObject static var viewModel: DynamicsViewModel = DynamicsViewModel()
 
-        CardView(card: CardInformation(
-            name: "Trocando Hobbies",
-            description: "Descrição exemplo do Trocando Hobbies",
-            photos: ["profile"]
-        )).environmentObject(viewModel)
-    }
+    static var previews: some View {
+       CardView(card: CardInformation(
+           name: "Trocando Hobbies",
+           description: "Descrição exemplo do Trocando Hobbies",
+           photos: ["profile"]
+       )).environmentObject(viewModel)
+   }
 }

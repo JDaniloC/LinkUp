@@ -63,9 +63,10 @@ struct DynamicDescriptionPage: View {
 }
 
 struct DynamicDescriptionPage_Previews: PreviewProvider {
+    @State static var isModalOpen: Bool = false
+    @State static var isConcluded: Bool = false
+
     static var previews: some View {
-        @State var isModalOpen: Bool = false
-        @State var isConcluded: Bool = false
         DynamicDescriptionPage(
             isModalOpen: $isModalOpen,
             isConcluded: $isConcluded,

@@ -8,25 +8,22 @@
 import SwiftUI
 
 struct CreateCard: View {
-    let placeholdString = "Digite alguma coisa..."
     @EnvironmentObject var viewModel: ProfileViewModel
     
-    @Binding var isShowing: Bool
-    @State private var cardTitle: String = ""
     @FocusState private var focus: CreateCardFields?
-    @State private var cardText: String = "Digite alguma coisa..."
+    let placeholdString = "Digite alguma coisa..."
     
     func finishForm() {
-        if cardTitle != "" &&
-            cardText != "" &&
-            cardText != "Digite alguma coisa..." {
-            viewModel.addCard(
-                title: cardTitle,
-                text: cardText
-            )
-            cardTitle = ""
-            cardText = "Digite alguma coisa..."
-            isShowing.toggle()
+        let text = viewModel.textEditInfo.text
+        let title = viewModel.textEditInfo.title
+        let isAbleToFinish: Bool = text != "" &&
+                                   title != "" &&
+                                   text != placeholdString
+        if isAbleToFinish {
+            viewModel.addCard(card: viewModel.textEditInfo)
+            viewModel.setEditInfo(title: "", text: "Digite alguma coisa...")
+            viewModel.setIsEditingCard(newValue: false)
+            viewModel.toggleCreatingNewCard()
         }
     }
     
@@ -35,32 +32,36 @@ struct CreateCard: View {
             VStack(){
                 HStack(alignment: .center){
                     Button("Cancelar", action: {
-                        isShowing.toggle()
+                        viewModel.toggleCreatingNewCard()
                     })
                     .padding()
                     Spacer()
-                    Button("Criar", action:{
+                    Button(viewModel.isEditingCard ? "Editar" : "Criar",
+                    action:{
                         finishForm()
                     })
                     .padding()
                 }
-                TextField("Título", text: $cardTitle)
+                TextField("Título", text: $viewModel.textEditInfo.title)
                     .focused($focus, equals: .title)
                     .font(.system(size:36, weight:.bold, design: .default))
                     .foregroundColor(.black)
                     .padding()
                 
-                TextEditor(text: $cardText)
+                TextEditor(text: $viewModel.textEditInfo.text)
                     .focused($focus, equals: .description)
-                    .foregroundColor(cardText == placeholdString ?
+                    .foregroundColor(viewModel.textEditInfo.text == placeholdString ?
                                      Color(uiColor: .placeholderText):
                                      Color(.black))
                     .font(.system(size:22))
                     .padding()
                     .scrollContentBackground(.hidden)
                     .onTapGesture {
-                        if cardText == placeholdString {
-                            cardText = ""
+                        if viewModel.textEditInfo.text == placeholdString {
+                            viewModel.setEditInfo(
+                                title: viewModel.textEditInfo.title,
+                                text: ""
+                            )
                         }
                     }
                    
@@ -70,9 +71,9 @@ struct CreateCard: View {
 }
 
 struct CreateCard_Previews: PreviewProvider {
+    @StateObject static var viewModel: ProfileViewModel = ProfileViewModel()
+
     static var previews: some View {
-        @State var isShowing: Bool = true;
-        @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
-        CreateCard(isShowing: $isShowing).environmentObject(viewModel)
+        CreateCard().environmentObject(viewModel)
     }
 }

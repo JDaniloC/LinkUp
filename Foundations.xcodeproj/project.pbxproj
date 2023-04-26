@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
 		79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA59029E847E0007FA30A /* CreateCard.swift */; };
+		B22C729D29F81E4C007FD9D9 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C729C29F81E4C007FD9D9 /* History.swift */; };
 		B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */; };
 		B25DC1BF29E72F0900088D62 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25DC1BE29E72F0800088D62 /* Dynamics.swift */; };
 		B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261A26F29DDE81400326C72 /* DynamicsCards.swift */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
 		79EAA59029E847E0007FA30A /* CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCard.swift; sourceTree = "<group>"; };
+		B22C729C29F81E4C007FD9D9 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
 		B25DC1BE29E72F0800088D62 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
 		B261A26F29DDE81400326C72 /* DynamicsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsCards.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		EA5DE93B29DDE3A50048BC43 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B22C729C29F81E4C007FD9D9 /* History.swift */,
 				79EAA59029E847E0007FA30A /* CreateCard.swift */,
 				65FF062D29E1C08E0057C938 /* Feedbacks.swift */,
 				EAA1CB2B29D3804C00A0BDF0 /* ProfileCard.swift */,
@@ -464,6 +467,7 @@
 				EAA1CB2C29D3804D00A0BDF0 /* ProfileCard.swift in Sources */,
 				EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */,
 				EA5DE94129DDE92F0048BC43 /* ProfileCardGrid.swift in Sources */,
+				B22C729D29F81E4C007FD9D9 /* History.swift in Sources */,
 				EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */,
 				65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */,
 				B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */,

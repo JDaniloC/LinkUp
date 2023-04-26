@@ -47,9 +47,10 @@ struct DynamicsCards: View {
 }
 
 struct DynamicsCards_Previews: PreviewProvider {
+    @StateObject static var viewModel = DynamicsViewModel()
+
     static var previews: some View {
-        @StateObject var viewModel = DynamicsViewModel()
         DynamicsCards()
-            .environmentObject(viewModel)
+           .environmentObject(viewModel)
     }
 }

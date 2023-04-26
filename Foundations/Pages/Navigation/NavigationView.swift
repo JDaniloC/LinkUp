@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationView: View {
     @StateObject private var profileVM = ProfileViewModel()
-    @StateObject private var relationVM = ProfileViewModel()
+    @StateObject private var relationVM = ProfileViewModel(false)
     @StateObject var relationsVM = RelationshipsViewModel()
     @StateObject var navigationVM = NavigationViewModel()
 

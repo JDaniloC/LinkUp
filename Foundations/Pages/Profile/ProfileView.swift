@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var creatingNewCard = false
     @EnvironmentObject var profileVM: ProfileViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
@@ -45,7 +44,7 @@ struct ProfileView: View {
                     
                     if pageName == "Meu Perfil" {
                         Button(action: {
-                            creatingNewCard.toggle()
+                            profileVM.toggleCreatingNewCard()
                         }) {
                             Text("Novo Card")
                                 .padding(.vertical, 5)
@@ -66,19 +65,20 @@ struct ProfileView: View {
                     ProfileCardGrid()
                 }
             }
-        }.fullScreenCover(isPresented: $creatingNewCard) {
-            CreateCard(isShowing: $creatingNewCard)
+        }.fullScreenCover(isPresented: $profileVM.creatingNewCard) {
+            CreateCard()
         }
     }
     
 }
 
 struct Profile_Previews: PreviewProvider {
+    @StateObject static var profileVM = ProfileViewModel()
+    @StateObject static var navigationVM = NavigationViewModel()
+
     static var previews: some View {
-        @StateObject var profileVM = ProfileViewModel()
-        @StateObject var navigationVM = NavigationViewModel()
-        ProfileView()
-            .environmentObject(profileVM)
-            .environmentObject(navigationVM)
-    }
+       ProfileView()
+           .environmentObject(profileVM)
+           .environmentObject(navigationVM)
+   }
 }
