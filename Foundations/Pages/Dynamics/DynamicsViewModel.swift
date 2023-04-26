@@ -45,7 +45,11 @@ final class DynamicsViewModel: ObservableObject {
     }
     
     func removeAndGetParticipants() -> [String] {
-        let removedCard = self.cards.filter{$0.isConcluded}[0]
+        let removedList = self.cards.filter{$0.isConcluded}
+        if (removedList.isEmpty) {
+            return []
+        }
+        let removedCard = removedList[0]
         self.cards = self.cards.filter{!$0.isConcluded}
         return removedCard.participants
     }
