@@ -40,3 +40,15 @@ enum CreateCardFields: Hashable {
     case title
     case description
 }
+
+class statusBarModel: ObservableObject {
+    var limit: Int = 15
+
+    @Published var status: String = "" {
+        didSet {
+            if status.count > limit {
+                status = String(status.prefix(limit))
+            }
+        }   
+    }
+}

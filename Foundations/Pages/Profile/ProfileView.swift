@@ -12,6 +12,8 @@ struct ProfileView: View {
     @EnvironmentObject var profileVM: ProfileViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
+    @State private var statusBar = statusBarModel()
+    @State private var toggleChangeStatus = true
     public var pageName: String = "Meu Perfil"
 
     func changeImage(newImage: String) {
@@ -40,8 +42,28 @@ struct ProfileView: View {
                             .padding(.top, 10)
                     }
                     Text(profileVM.profile.name)
-                    Text(profileVM.profile.status)
-                    
+                    HStack(spacing: 0) {
+                        Text("Me sentindo... ")
+                        if toggleChangeStatus{
+                           Text(statusBar.status)
+                        } else {
+                            TextField("", text: $statusBar.status)
+                                .frame(minWidth: 30)
+                                .fixedSize()
+                                .overlay(RoundedRectangle(cornerRadius: 5.0).stroke(Color("card-color")))
+                                .textInputAutocapitalization(.never)
+                                .onSubmit {
+                                    toggleChangeStatus = !toggleChangeStatus
+                                }         
+                        }
+                        
+                        Button {
+                            toggleChangeStatus = !toggleChangeStatus
+                        } label: {
+                            Image(systemName: "square.and.pencil")
+                        }
+                    }
+                                            
                     if pageName == "Meu Perfil" {
                         Button(action: {
                             profileVM.toggleCreatingNewCard()
