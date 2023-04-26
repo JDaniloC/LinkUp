@@ -13,6 +13,7 @@ struct CreateCard: View {
     
     @Binding var isShowing: Bool
     @State private var cardTitle: String = ""
+    @FocusState private var focus: CreateCardFields?
     @State private var cardText: String = "Digite alguma coisa..."
     
     func finishForm() {
@@ -44,11 +45,13 @@ struct CreateCard: View {
                     .padding()
                 }
                 TextField("Título", text: $cardTitle)
+                    .focused($focus, equals: .title)
                     .font(.system(size:36, weight:.bold, design: .default))
                     .foregroundColor(.black)
                     .padding()
                 
                 TextEditor(text: $cardText)
+                    .focused($focus, equals: .description)
                     .foregroundColor(cardText == placeholdString ?
                                      Color(uiColor: .placeholderText):
                                      Color(.black))

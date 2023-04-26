@@ -9,11 +9,16 @@
 import SwiftUI
 
 struct ProfileView: View {
-    public var pageName: String = "Meu Perfil"
     @State private var creatingNewCard = false
     @EnvironmentObject var profileVM: ProfileViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
+    public var pageName: String = "Meu Perfil"
+
+    func changeImage(newImage: String) {
+        profileVM.profile.image = newImage
+    }
+    
     func navigateToDynamics() {
         navigationVM.setSelectedTab(navigateTo: Tabs.dynamics)
     }
@@ -23,10 +28,18 @@ struct ProfileView: View {
             Text(pageName)
                 .font(.title2)
                 .bold()
+                .padding(.bottom, 30)
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    ProfileCircle(profileVM.profile.image)
-                        .padding(.top, 50)
+                    if pageName == "Meu Perfil" {
+                        MemojiInputView(
+                            profileVM.profile.image,
+                            handler: changeImage
+                        ).frame(width: 100, height: 140)
+                    } else {
+                        ProfileCircle(profileVM.profile.image)
+                            .padding(.top, 10)
+                    }
                     Text(profileVM.profile.name)
                     Text(profileVM.profile.status)
                     

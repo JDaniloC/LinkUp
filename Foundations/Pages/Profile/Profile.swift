@@ -29,8 +29,14 @@ struct Profile: Hashable, Identifiable {
     let id: UUID = UUID()
     var name: String
     var image: String
+    var force: Int = 0
     var status: String
     
     var cardList: [CardInfo]
     var feedbacks: [Feedback]
+}
+
+enum CreateCardFields: Hashable {
+    case title
+    case description
 }

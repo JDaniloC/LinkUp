@@ -47,7 +47,7 @@ struct RelationshipsView: View {
                                     x: n.position.x,
                                     y: n.position.y))
                         .stroke(Color("line-color"),
-                                lineWidth: 2)
+                                lineWidth: CGFloat(n.force))
                         .shadow(radius: 1)
                     }
                     GeometryReader { geometry in
@@ -65,7 +65,7 @@ struct RelationshipsView: View {
                             }
                         }
                         ProfileCircle("profile",
-                            profileName: "Sofia",
+                            profileName: "Alice Diniz",
                             radius: 60
                         ).position(getPosition(
                             geometry: geometry,

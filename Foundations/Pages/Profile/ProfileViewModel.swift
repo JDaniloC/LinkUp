@@ -11,7 +11,7 @@ import SwiftUI
 final class ProfileViewModel: ObservableObject {
     @Published var profile: Profile = Profile(
         name: "Alice Diniz",
-        image: "profile",
+        image: "",
         status: "Estou me sentindo... Cansada",
         cardList: [
             CardInfo(

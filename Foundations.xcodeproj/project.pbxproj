@@ -30,6 +30,7 @@
 		EA36AC7F29D5D27D00E40954 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7629D5D27D00E40954 /* Inter-ExtraLight.ttf */; };
 		EA36AC8029D5D27D00E40954 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */; };
 		EA39B37E29CC9D6B00B3861C /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39B37D29CC9D6B00B3861C /* Relationships.swift */; };
+		EA51C7E829F81FF600A65807 /* MemojiInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA51C7E729F81FF600A65807 /* MemojiInputView.swift */; };
 		EA5DE93529DDE2840048BC43 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93229DDE2840048BC43 /* ProfileView.swift */; };
 		EA5DE93629DDE2840048BC43 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */; };
 		EA5DE93F29DDE4910048BC43 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */; };
@@ -91,6 +92,7 @@
 		EA36AC7729D5D27D00E40954 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.ttf"; path = "Foundations/Fonts/Inter-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		EA36AC8129D5D2D500E40954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA39B37D29CC9D6B00B3861C /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
+		EA51C7E729F81FF600A65807 /* MemojiInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiInputView.swift; sourceTree = "<group>"; };
 		EA5DE93229DDE2840048BC43 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EA5DE93329DDE2840048BC43 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EA5DE93E29DDE4910048BC43 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				EA00E06B29CC94AA00C55FB6 /* ProfileCircle.swift */,
 				EA64C52E29EF284A002D6877 /* StyledFonts.swift */,
 				EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */,
+				EA51C7E729F81FF600A65807 /* MemojiInputView.swift */,
 			);
 			name = Components;
 			path = Foundations/Components;
@@ -467,6 +470,7 @@
 				B27A26A729EEC96E004955ED /* DynamicsProgress.swift in Sources */,
 				EA85FFDE29F70DD800C80012 /* NavigationView.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,
+				EA51C7E829F81FF600A65807 /* MemojiInputView.swift in Sources */,
 				B261A27029DDE81400326C72 /* DynamicsCards.swift in Sources */,
 				EA0CC08B29F714FC008C7E9D /* DynamicsView.swift in Sources */,
 			);

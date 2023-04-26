@@ -98,6 +98,7 @@ final class RelationshipsViewModel: ObservableObject {
             let relation = relationships[i];
             let node: Node = Node(
                 id: UUID(),
+                force: relation.force,
                 name: relation.name,
                 image: relation.image,
                 position: CGPoint(x: x, y: y)
