@@ -12,7 +12,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Kiev Gama",
             image: "kiev-gama",
-            status: "Estou me sentindo... Focado",
+            status: "Focado",
             cardList: [
                 CardInfo(
                     text: """
@@ -30,7 +30,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Kiev Gama",
             image: "kiev-gama",
-            status: "Estou me sentindo... Focado",
+            status: "Focado",
             cardList: [
                 CardInfo(
                     text: """
@@ -48,7 +48,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Lisa Mello",
             image: "lisa-mello",
-            status: "Estou me sentindo... Muito bem!",
+            status: "Muito bem!",
             cardList: [
                 CardInfo(
                     text: "Com esse projeto espero aprender a fazer animações com o figma e aprender o básico de programação.",

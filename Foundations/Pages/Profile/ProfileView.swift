@@ -12,8 +12,8 @@ struct ProfileView: View {
     @EnvironmentObject var profileVM: ProfileViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
-    @State private var statusBar = statusBarModel()
-    @State private var toggleChangeStatus = true
+    
+   
     public var pageName: String = "Meu Perfil"
 
     func changeImage(newImage: String) {
@@ -24,6 +24,10 @@ struct ProfileView: View {
         navigationVM.setSelectedTab(navigateTo: Tabs.dynamics)
     }
     
+    func myProfilePage() -> Bool{
+        return self.pageName == "Meu Perfil"
+    }
+        
     var body: some View {
         VStack {
             Text(pageName)
@@ -32,7 +36,8 @@ struct ProfileView: View {
                 .padding(.bottom, 30)
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    if pageName == "Meu Perfil" {
+                    
+                    if myProfilePage() {
                         MemojiInputView(
                             profileVM.profile.image,
                             handler: changeImage
@@ -43,28 +48,18 @@ struct ProfileView: View {
                     }
                     Text(profileVM.profile.name)
                     HStack(spacing: 0) {
+                        //check status, editable status
                         Text("Me sentindo... ")
-                        if toggleChangeStatus{
-                           Text(statusBar.status)
-                        } else {
-                            TextField("", text: $statusBar.status)
-                                .frame(minWidth: 30)
-                                .fixedSize()
-                                .overlay(RoundedRectangle(cornerRadius: 5.0).stroke(Color("card-color")))
-                                .textInputAutocapitalization(.never)
-                                .onSubmit {
-                                    toggleChangeStatus = !toggleChangeStatus
-                                }         
+                        if myProfilePage(){
+                            DynamicStatus()
+                        } else{
+                            Text(profileVM.profile.status)
                         }
                         
-                        Button {
-                            toggleChangeStatus = !toggleChangeStatus
-                        } label: {
-                            Image(systemName: "square.and.pencil")
-                        }
                     }
-                                            
-                    if pageName == "Meu Perfil" {
+                                     
+                    
+                    if myProfilePage() {
                         Button(action: {
                             profileVM.toggleCreatingNewCard()
                         }) {
@@ -104,3 +99,5 @@ struct Profile_Previews: PreviewProvider {
            .environmentObject(navigationVM)
    }
 }
+
+
