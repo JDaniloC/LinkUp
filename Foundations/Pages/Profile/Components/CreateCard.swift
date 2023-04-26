@@ -47,6 +47,7 @@ struct CreateCard: View {
                     .font(.system(size:36, weight:.bold, design: .default))
                     .foregroundColor(.black)
                     .padding()
+                   
                 
                 TextEditor(text: $cardText)
                     .foregroundColor(cardText == placeholdString ?
