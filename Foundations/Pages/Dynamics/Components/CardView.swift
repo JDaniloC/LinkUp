@@ -9,6 +9,12 @@ import SwiftUI
 
 struct CardView: View {
     var card: CardInformation
+    @EnvironmentObject var relationsVM: RelationshipsViewModel
+    
+    func finishDynamic() {
+        let imageList = viewModel.removeAndGetParticipants()
+        relationsVM.updateBonds(imageList: imageList)
+    }
 
     @EnvironmentObject var viewModel: DynamicsViewModel
     @State private var offset = CGSize.zero
@@ -48,10 +54,14 @@ struct CardView: View {
                     ))
             }
             .fullScreenCover(isPresented: $isModalOpen) {
-                DynamicDescriptionPage(isModalOpen: $isModalOpen, isConcluded: $isConcluded, title: card.name, description: card.description, photos: card.participants)
+                DynamicDescriptionPage(isModalOpen: $isModalOpen,
+                                       isConcluded: $isConcluded,
+                                       title: card.name,
+                                       description: card.description,
+                                       photos: card.participants)
                     .onDisappear(perform: {
                         card.isConcluded = isConcluded
-                        viewModel.cards = viewModel.cards.filter{!$0.isConcluded}
+                        finishDynamic()
                     })
             }
         }

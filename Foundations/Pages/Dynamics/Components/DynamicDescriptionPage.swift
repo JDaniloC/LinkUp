@@ -48,8 +48,8 @@ struct DynamicDescriptionPage: View {
             Spacer()
 
             Button(action: {
-                isModalOpen.toggle()
                 isConcluded = true
+                isModalOpen.toggle()
             }, label: {
                 Text("Concluir")
                     .padding(.vertical, 8)

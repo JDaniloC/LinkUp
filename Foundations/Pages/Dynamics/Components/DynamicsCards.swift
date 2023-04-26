@@ -33,10 +33,8 @@ struct DynamicsCards: View {
                                         viewModel.remove(index: infos.index)
                                         viewModel.add(card: infos.selectedCard)
                                     }
-                                    viewModel.setCardOffset(cardID: card.id, newOffset: .zero)
-                                    if card.isConcluded {
-                                        viewModel.remove(index: infos.index)
-                                    }
+                                    viewModel.setCardOffset(cardID: card.id,
+                                                            newOffset: .zero)
                                 }
                             }
                     )

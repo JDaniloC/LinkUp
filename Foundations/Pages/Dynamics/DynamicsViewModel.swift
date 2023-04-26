@@ -44,6 +44,12 @@ final class DynamicsViewModel: ObservableObject {
         self.cards.remove(at: index)
     }
     
+    func removeAndGetParticipants() -> [String] {
+        let removedCard = self.cards.filter{$0.isConcluded}[0]
+        self.cards = self.cards.filter{!$0.isConcluded}
+        return removedCard.participants
+    }
+    
     func getCardNIndex(cardID: UUID) -> (selectedCard: CardInformation, index: Int) {
         var selectedCard = CardInformation(name: "default", description: "default", photos: ["default"])
         var index = 0

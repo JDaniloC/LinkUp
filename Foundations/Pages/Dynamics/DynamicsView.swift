@@ -14,19 +14,15 @@ struct DynamicsView: View {
     var body: some View {
         VStack() {
             DynamicsProgress()
-            
             Spacer()
 
             if !scrollView {
                 DynamicsCards()
-                Button(
-                    action: {
-                        scrollView.toggle()
-                    },
-                    label: {
-                        Text("Exibir Dinâmicas")
-                })
-                .offset(y: 52)
+                Button(action: {
+                    scrollView.toggle()
+                }, label: {
+                    Text("Exibir Dinâmicas")
+                }).offset(y: 52)
             } else {
                 DynamicsCardsScroll()
             }

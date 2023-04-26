@@ -9,13 +9,14 @@ import SwiftUI
 
 struct RelationshipsView: View {
     // ProfileView View Child needs NavigationViewModel
+    @StateObject private var relationProfileVM = ProfileViewModel(false)
+    @StateObject var relationsVM: RelationshipsViewModel
     @EnvironmentObject var profileVM: ProfileViewModel
-    @ObservedObject var relationsVM: RelationshipsViewModel
     @State var navPath: NavigationPath = .init()
     
     func navigate(node: Node) {
         let profile = relationsVM.getRelationByNode(node: node)
-        profileVM.setProfileData(newProfile: profile)
+        relationProfileVM.setProfileData(newProfile: profile)
         navPath.removeLast(navPath.count)
         navPath.append(profile)
     }
@@ -64,9 +65,10 @@ struct RelationshipsView: View {
                                 self.navigate(node: node)
                             }
                         }
-                        ProfileCircle("profile",
-                            profileName: "Alice Diniz",
-                            radius: 60
+                        ProfileCircle("person.crop.circle",
+                            bindingImage: $profileVM.profile.image,
+                            profileName: profileVM.profile.name,
+                            radius: 60, isBase64: true
                         ).position(getPosition(
                             geometry: geometry,
                             position: CGPoint(x: 0.5, y: 0.5)
@@ -85,6 +87,7 @@ struct RelationshipsView: View {
             }
             .navigationDestination(for: Profile.self) { profile in
                 ProfileView(pageName: "Perfil")
+                    .environmentObject(relationProfileVM)
             }
         }
     }

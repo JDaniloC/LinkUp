@@ -66,6 +66,21 @@ final class RelationshipsViewModel: ObservableObject {
         self.getPositions()
     }
     
+    func updateBonds(imageList: [String]) {
+        self.relationships = self.relationships.map { (relation) -> Profile in
+            if imageList.contains(relation.image) {
+                return Profile(name: relation.name,
+                               image: relation.image,
+                               force: min(relation.force + 1, 5),
+                               status: relation.status,
+                               cardList: relation.cardList,
+                               feedbacks: relation.feedbacks)
+            }
+            return relation
+        }
+        self.getPositions() 
+    }
+    
     func setRelationships(newRelationships: [Profile]) {
         self.relationships = newRelationships
         getPositions()

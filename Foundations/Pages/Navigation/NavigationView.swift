@@ -9,7 +9,6 @@ import SwiftUI
 
 struct NavigationView: View {
     @StateObject private var profileVM = ProfileViewModel()
-    @StateObject private var relationVM = ProfileViewModel(false)
     @StateObject var relationsVM = RelationshipsViewModel()
     @StateObject var navigationVM = NavigationViewModel()
 
@@ -22,7 +21,7 @@ struct NavigationView: View {
                         optionToVerify: Tabs.relationships)
                 }
                 .tag(Tabs.relationships)
-                .environmentObject(relationVM)
+                .environmentObject(profileVM)
                 .environmentObject(navigationVM)
 
             DynamicsView()
@@ -32,6 +31,7 @@ struct NavigationView: View {
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
+                .environmentObject(relationsVM)
 
             ProfileView()
                 .tabItem() {

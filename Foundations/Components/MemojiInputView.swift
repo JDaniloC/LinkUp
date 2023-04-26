@@ -93,7 +93,7 @@ class MemojiInputViewController: UIViewController {
         self.textView = textView
         self.coordinator = coordinator
         self.memojiSelectorView = UIHostingController(
-            rootView: ProfileCircle(
+            rootView: ProfileCircle("person.crop.circle.badge.plus",
                 bindingImage: coordinator.$imageBase64String,
                 isBase64: true
             )).view!
