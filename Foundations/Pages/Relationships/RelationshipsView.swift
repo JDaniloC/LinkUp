@@ -9,13 +9,14 @@ import SwiftUI
 
 struct RelationshipsView: View {
     // ProfileView View Child needs NavigationViewModel
+    @StateObject private var relationProfileVM = ProfileViewModel(false)
+    @StateObject var relationsVM: RelationshipsViewModel
     @EnvironmentObject var profileVM: ProfileViewModel
-    @ObservedObject var relationsVM: RelationshipsViewModel
     @State var navPath: NavigationPath = .init()
     
     func navigate(node: Node) {
         let profile = relationsVM.getRelationByNode(node: node)
-        profileVM.setProfileData(newProfile: profile)
+        relationProfileVM.setProfileData(newProfile: profile)
         navPath.removeLast(navPath.count)
         navPath.append(profile)
     }
@@ -47,7 +48,7 @@ struct RelationshipsView: View {
                                     x: n.position.x,
                                     y: n.position.y))
                         .stroke(Color("line-color"),
-                                lineWidth: 2)
+                                lineWidth: CGFloat(n.force))
                         .shadow(radius: 1)
                     }
                     GeometryReader { geometry in
@@ -64,9 +65,10 @@ struct RelationshipsView: View {
                                 self.navigate(node: node)
                             }
                         }
-                        ProfileCircle("profile",
-                            profileName: "Sofia",
-                            radius: 60
+                        ProfileCircle("person.crop.circle",
+                            bindingImage: $profileVM.profile.image,
+                            profileName: profileVM.profile.name,
+                            radius: 60, isBase64: true
                         ).position(getPosition(
                             geometry: geometry,
                             position: CGPoint(x: 0.5, y: 0.5)
@@ -85,19 +87,20 @@ struct RelationshipsView: View {
             }
             .navigationDestination(for: Profile.self) { profile in
                 ProfileView(pageName: "Perfil")
+                    .environmentObject(relationProfileVM)
             }
         }
     }
 }
 
-//struct RelationshipsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @StateObject var profileVM = ProfileViewModel()
-//        @StateObject var relationsVM = RelationshipsViewModel()
-//        @StateObject var navigationVM = NavigationViewModel()
-//
-//        RelationshipsView(relationsVM: relationsVM)
-//            .environmentObject(profileVM)
-//            .environmentObject(navigationVM)
-//    }
-//}
+struct RelationshipsView_Previews: PreviewProvider {
+    @StateObject static var profileVM = ProfileViewModel()
+    @StateObject static var relationsVM = RelationshipsViewModel()
+    @StateObject static var navigationVM = NavigationViewModel()
+
+    static var previews: some View {
+        RelationshipsView(relationsVM: relationsVM)
+            .environmentObject(profileVM)
+            .environmentObject(navigationVM)
+    }
+}

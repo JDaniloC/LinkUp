@@ -9,6 +9,12 @@ import SwiftUI
 
 struct CardView: View {
     var card: CardInformation
+    @EnvironmentObject var relationsVM: RelationshipsViewModel
+    
+    func finishDynamic() {
+        let imageList = viewModel.removeAndGetParticipants()
+        relationsVM.updateBonds(imageList: imageList)
+    }
 
     @EnvironmentObject var viewModel: DynamicsViewModel
     @State private var offset = CGSize.zero
@@ -48,10 +54,14 @@ struct CardView: View {
                     ))
             }
             .fullScreenCover(isPresented: $isModalOpen) {
-                DynamicDescriptionPage(isModalOpen: $isModalOpen, isConcluded: $isConcluded, title: card.name, description: card.description, photos: card.participants)
+                DynamicDescriptionPage(isModalOpen: $isModalOpen,
+                                       isConcluded: $isConcluded,
+                                       title: card.name,
+                                       description: card.description,
+                                       photos: card.participants)
                     .onDisappear(perform: {
                         card.isConcluded = isConcluded
-                        viewModel.cards = viewModel.cards.filter{!$0.isConcluded}
+                        finishDynamic()
                     })
             }
         }
@@ -65,14 +75,14 @@ struct CardView: View {
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
-//
-//        CardView(card: CardInformation(
-//            name: "Trocando Hobbies",
-//            description: "Descrição exemplo do Trocando Hobbies",
-//            photos: ["profile"]
-//        )).environmentObject(viewModel)
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    @StateObject static var viewModel: DynamicsViewModel = DynamicsViewModel()
+
+    static var previews: some View {
+       CardView(card: CardInformation(
+           name: "Trocando Hobbies",
+           description: "Descrição exemplo do Trocando Hobbies",
+           photos: ["profile"]
+       )).environmentObject(viewModel)
+   }
+}

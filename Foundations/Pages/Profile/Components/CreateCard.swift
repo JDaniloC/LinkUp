@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateCard: View {
     @EnvironmentObject var viewModel: ProfileViewModel
     
+    @FocusState private var focus: CreateCardFields?
     let placeholdString = "Digite alguma coisa..."
     
     func finishForm() {
@@ -42,11 +43,13 @@ struct CreateCard: View {
                     .padding()
                 }
                 TextField("Título", text: $viewModel.textEditInfo.title)
+                    .focused($focus, equals: .title)
                     .font(.system(size:36, weight:.bold, design: .default))
                     .foregroundColor(.black)
                     .padding()
                 
                 TextEditor(text: $viewModel.textEditInfo.text)
+                    .focused($focus, equals: .description)
                     .foregroundColor(viewModel.textEditInfo.text == placeholdString ?
                                      Color(uiColor: .placeholderText):
                                      Color(.black))

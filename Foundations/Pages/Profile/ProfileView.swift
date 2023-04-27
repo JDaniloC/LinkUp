@@ -9,27 +9,57 @@
 import SwiftUI
 
 struct ProfileView: View {
-    public var pageName: String = "Meu Perfil"
     @EnvironmentObject var profileVM: ProfileViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
+    
+   
+    public var pageName: String = "Meu Perfil"
+
+    func changeImage(newImage: String) {
+        profileVM.profile.image = newImage
+    }
+    
     func navigateToDynamics() {
         navigationVM.setSelectedTab(navigateTo: Tabs.dynamics)
     }
     
+    func myProfilePage() -> Bool{
+        return self.pageName == "Meu Perfil"
+    }
+        
     var body: some View {
         VStack {
             Text(pageName)
                 .font(.title2)
                 .bold()
+                .padding(.bottom, 30)
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    ProfileCircle(profileVM.profile.image)
-                        .padding(.top, 50)
-                    Text(profileVM.profile.name)
-                    Text(profileVM.profile.status)
                     
-                    if pageName == "Meu Perfil" {
+                    if myProfilePage() {
+                        MemojiInputView(
+                            profileVM.profile.image,
+                            handler: changeImage
+                        ).frame(width: 100, height: 140)
+                    } else {
+                        ProfileCircle(profileVM.profile.image)
+                            .padding(.top, 10)
+                    }
+                    Text(profileVM.profile.name)
+                    HStack(spacing: 0) {
+                        //check status, editable status
+                        Text("Me sentindo... ")
+                        if myProfilePage(){
+                            DynamicStatus()
+                        } else{
+                            Text(profileVM.profile.status)
+                        }
+                        
+                    }
+                                     
+                    
+                    if myProfilePage() {
                         Button(action: {
                             profileVM.toggleCreatingNewCard()
                         }) {
@@ -59,12 +89,15 @@ struct ProfileView: View {
     
 }
 
-//struct Profile_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @StateObject var profileVM = ProfileViewModel()
-//        @StateObject var navigationVM = NavigationViewModel()
-//        ProfileView()
-//            .environmentObject(profileVM)
-//            .environmentObject(navigationVM)
-//    }
-//}
+struct Profile_Previews: PreviewProvider {
+    @StateObject static var profileVM = ProfileViewModel()
+    @StateObject static var navigationVM = NavigationViewModel()
+
+    static var previews: some View {
+       ProfileView()
+           .environmentObject(profileVM)
+           .environmentObject(navigationVM)
+   }
+}
+
+

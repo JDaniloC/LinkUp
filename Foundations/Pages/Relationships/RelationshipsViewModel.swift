@@ -12,7 +12,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Juliano Paes",
             image: "juliano-paes",
-            status: "Estou me sentindo... Focado",
+            status: "Focado",
             cardList: [
                 CardInfo(
                     text: """
@@ -30,7 +30,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Kiev Gama",
             image: "kiev-gama",
-            status: "Estou me sentindo... Focado",
+            status: "Focado",
             cardList: [
                 CardInfo(
                     text: """
@@ -48,7 +48,7 @@ final class RelationshipsViewModel: ObservableObject {
         Profile(
             name: "Lisa Mello",
             image: "lisa-mello",
-            status: "Estou me sentindo... Muito bem!",
+            status: "Muito bem!",
             cardList: [
                 CardInfo(
                     text: "Com esse projeto espero aprender a fazer animações com o figma e aprender o básico de programação.",
@@ -64,6 +64,21 @@ final class RelationshipsViewModel: ObservableObject {
     
     init() {
         self.getPositions()
+    }
+    
+    func updateBonds(imageList: [String]) {
+        self.relationships = self.relationships.map { (relation) -> Profile in
+            if imageList.contains(relation.image) {
+                return Profile(name: relation.name,
+                               image: relation.image,
+                               force: min(relation.force + 1, 5),
+                               status: relation.status,
+                               cardList: relation.cardList,
+                               feedbacks: relation.feedbacks)
+            }
+            return relation
+        }
+        self.getPositions() 
     }
     
     func setRelationships(newRelationships: [Profile]) {
@@ -98,6 +113,7 @@ final class RelationshipsViewModel: ObservableObject {
             let relation = relationships[i];
             let node: Node = Node(
                 id: UUID(),
+                force: relation.force,
                 name: relation.name,
                 image: relation.image,
                 position: CGPoint(x: x, y: y)

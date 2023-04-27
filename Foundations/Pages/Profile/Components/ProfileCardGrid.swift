@@ -76,9 +76,10 @@ struct ProfileCardGrid: View {
     }
 }
 
-//struct ProfileCardGrid_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
-//        ProfileCardGrid().environmentObject(viewModel)
-//    }
-//}
+struct ProfileCardGrid_Previews: PreviewProvider {
+    @StateObject static var viewModel: ProfileViewModel = ProfileViewModel()
+
+    static var previews: some View {
+        ProfileCardGrid().environmentObject(viewModel)
+    }
+}

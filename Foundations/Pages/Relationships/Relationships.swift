@@ -11,6 +11,7 @@ struct Relationships {}
 
 struct Node: Identifiable {
     var id: UUID
+    var force: Int
     var name: String
     var image: String
     var position: CGPoint

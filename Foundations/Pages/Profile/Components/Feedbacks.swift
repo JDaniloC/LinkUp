@@ -31,9 +31,10 @@ struct Feedbacks: View {
     }
 }
 
-//struct Feedbacks_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
-//        Feedbacks().environmentObject(viewModel)
-//    }
-//}
+struct Feedbacks_Previews: PreviewProvider {
+    @StateObject static var viewModel: ProfileViewModel = ProfileViewModel()
+
+    static var previews: some View {
+        Feedbacks().environmentObject(viewModel)
+    }
+}

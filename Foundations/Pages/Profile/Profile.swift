@@ -29,9 +29,27 @@ struct Profile: Hashable, Identifiable {
     let id: UUID = UUID()
     var name: String
     var image: String
+    var force: Int = 0
     var status: String
     
     var cardList: [CardInfo]
     var feedbacks: [Feedback]
+}
+
+enum CreateCardFields: Hashable {
+    case title
+    case description
+}
+
+class statusBarModel: ObservableObject {
+    var limit: Int = 15
+
+    @Published var status: String = "" {
+        didSet {
+            if status.count > limit {
+                status = String(status.prefix(limit))
+            }
+        }   
+    }
 }
 

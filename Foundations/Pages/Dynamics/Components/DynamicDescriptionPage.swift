@@ -48,8 +48,8 @@ struct DynamicDescriptionPage: View {
             Spacer()
 
             Button(action: {
-                isModalOpen.toggle()
                 isConcluded = true
+                isModalOpen.toggle()
             }, label: {
                 Text("Concluir")
                     .padding(.vertical, 8)
@@ -62,16 +62,17 @@ struct DynamicDescriptionPage: View {
     }
 }
 
-//struct DynamicDescriptionPage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        @State var isModalOpen: Bool = false
-//        @State var isConcluded: Bool = false
-//        DynamicDescriptionPage(
-//            isModalOpen: $isModalOpen,
-//            isConcluded: $isConcluded,
-//            title: "Título do card",
-//            description: "Descrição do card",
-//            photos: ["profile"]
-//        )
-//    }
-//}
+struct DynamicDescriptionPage_Previews: PreviewProvider {
+    @State static var isModalOpen: Bool = false
+    @State static var isConcluded: Bool = false
+
+    static var previews: some View {
+        DynamicDescriptionPage(
+            isModalOpen: $isModalOpen,
+            isConcluded: $isConcluded,
+            title: "Título do card",
+            description: "Descrição do card",
+            photos: ["profile"]
+        )
+    }
+}
