@@ -12,27 +12,13 @@ struct DynamicsView: View {
     @StateObject var viewModel: DynamicsViewModel = DynamicsViewModel()
     
     var body: some View {
-        VStack() {
-            DynamicsProgress()
-            
-            Spacer()
-
+        VStack {
             if !scrollView {
-                DynamicsCards()
-                Button(
-                    action: {
-                        scrollView.toggle()
-                    },
-                    label: {
-                        Text("Exibir Dinâmicas")
-                })
-                .offset(y: 52)
+                DynamicsCards(scrollView: $scrollView)
             } else {
-                DynamicsCardsScroll()
+                DynamicsCardsScroll(scrollView: $scrollView)
+                    .offset(y: 50)
             }
-            
-            Spacer()
-            Spacer()
         }
         .onAppear(perform: {scrollView = false})
         .environmentObject(viewModel)

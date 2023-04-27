@@ -71,7 +71,7 @@ struct ProfileCardGrid: View {
     func editCard(_ cardInfo: CardInfo) {
         deleteCard(cardInfo.id)
         viewModel.setEditInfo(title: cardInfo.title, text: cardInfo.text)
-        viewModel.setIsEditingCNard(newValue: true)
+        viewModel.setIsEditingCard(newValue: true)
         viewModel.toggleCreatingNewCard()
     }
 }
