@@ -12,7 +12,7 @@ final class DynamicsViewModel: ObservableObject {
         CardInformation(
             name: "Verdade ou Mentira",
             description: "Desta maneira, o consenso sobre a necessidade de qualificação promove a alavancagem da gestão inovadora da qual fazemos parte. É importante questionar o quanto o aumento do diálogo entre os diferentes setores produtivos facilita a criação das formas de ação. Assim mesmo, a crescente influência da mídia auxilia a preparação e a composição de todos os recursos funcionais envolvidos.",
-            photos: ["profile", "kiev-gama", "lisa-mello"]
+            photos: ["profile", "juliano-paes", "lisa-mello"]
         ),
         CardInformation(
             name: "Trocando Hobbies",
