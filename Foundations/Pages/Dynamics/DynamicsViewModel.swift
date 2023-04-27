@@ -10,30 +10,66 @@ import SwiftUI
 final class DynamicsViewModel: ObservableObject {
     @Published var cards: [CardInformation] = [
         CardInformation(
-            name: "Verdade ou Mentira",
-            description: "Desta maneira, o consenso sobre a necessidade de qualificação promove a alavancagem da gestão inovadora da qual fazemos parte. É importante questionar o quanto o aumento do diálogo entre os diferentes setores produtivos facilita a criação das formas de ação. Assim mesmo, a crescente influência da mídia auxilia a preparação e a composição de todos os recursos funcionais envolvidos.",
-            photos: ["profile", "juliano-paes", "lisa-mello"]
+            name: "Fatos Pessoais",
+            description: "Cada membro deve compartilhar três fatos pessoais sobre si mesmo, sendo que um deles é falso. Os outros membros devem tentar adivinhar qual é o fato falso.",
+            photos: ["profile", "kiev-gama", "juliano-paes"]
         ),
+
         CardInformation(
-            name: "Trocando Hobbies",
-            description: "Nunca é demais lembrar o peso e o significado destes problemas, uma vez que a necessidade de renovação processual oferece uma interessante oportunidade para verificação de alternativas às soluções ortodoxas. O incentivo ao avanço tecnológico, assim como o desafiador cenário globalizado afeta positivamente a correta previsão do orçamento setorial.",
+            name: "Apresentação rápida",
+            description: "Cada membro tem 30 segundos para se apresentar, falando sobre quem são, suas habilidades e experiências.",
+            photos: ["profile", "juliano-paes"]
+        ),
+
+        CardInformation(
+            name: "Desafio das fotos",
+            description: "Cada membro deve trazer uma foto de quando era criança e contar um pouco sobre sua história e como essa foto representa um momento importante de sua vida.",
             photos: ["profile", "kiev-gama"]
         ),
+
         CardInformation(
-            name: "Compartilhando Histórias",
-            description: "No mundo atual, a competitividade nas transações comerciais desafia a capacidade de equalização dos relacionamentos verticais entre as hierarquias. No entanto, não podemos esquecer que o novo modelo estrutural aqui preconizado prepara-nos para enfrentar situações atípicas decorrentes dos índices pretendidos. ",
-            photos: ["profile", "kiev-gama"]
+            name: "Bingo de Perguntas",
+            description: "Crie um cartão de bingo com perguntas sobre as experiências e habilidades de cada membro. Os membros devem circular as perguntas que são verdadeiras sobre eles.",
+            photos: ["profile", "juliano-paes"]
+        ),
+
+        CardInformation(
+            name: "Eu nunca",
+            description: "Cada membro deve fazer uma afirmação começando com 'Eu nunca...', como por exemplo 'Eu nunca viajei para outro país'. Os membros que já fizeram o que foi dito devem levantar a mão e compartilhar sua experiência.",
+            photos: ["profile"]
         ),
         CardInformation(
-            name: "Resolvendo Conflitos",
-            description: "Percebemos, cada vez mais, que o comprometimento entre as equipes obstaculiza a apreciação da importância do sistema de formação de quadros que corresponde às necessidades. Todavia, o entendimento das metas propostas cumpre um papel essencial na formulação do fluxo de informações.",
+            name: "Papel Higiênico",
+            description: "Cada membro deve pegar um rolo de papel higiênico e rasgar a quantidade que acha que usaria em um dia normal. Depois, para cada folha rasgada, deve compartilhar uma informação pessoal com o grupo.",
             photos: ["profile", "lisa-mello"]
         ),
+
         CardInformation(
-            name: "Ilha Deserta",
-            description: "A certificação de metodologias que nos auxiliam a lidar com a estrutura atual da organização acarreta um processo de reformulação e modernização do remanejamento dos quadros funcionais.",
-            photos: ["lisa-mello", "kiev-gama"]
-        )
+            name: "Post-it",
+            description: "Cada membro recebe uma quantidade de post-its e deve escrever um fato pessoal em cada um deles. Em seguida, devem colá-los nas costas dos outros membros, sem que eles vejam o que está escrito. Cada um deve tentar adivinhar o que está escrito em seu post-it, fazendo perguntas aos outros membros.",
+            photos: ["profile", "kiev-gama"]
+        ),
+
+        CardInformation(
+            name: "Desafio da Comida",
+            description: "Cada membro deve trazer um prato de sua preferência para compartilhar com o grupo. Antes de começar a comer, devem contar a história por trás do prato e como ele se tornou um de seus favoritos.",
+            photos: ["profile", "lisa-mello"]
+        ),
+
+        CardInformation(
+            name: "Passado",
+            description: "Cada membro deve trazer um objeto que tenha um significado especial para ele e compartilhar com o grupo a história por trás desse objeto. Pode ser desde um brinquedo de infância até um item de coleção.",
+            photos: ["profile", "juliano-paes"]
+        ),
+
+        CardInformation(
+            name: "História",
+            description: "Cada membro deve escrever um pedaço de uma história em um pedaço de papel, sem que os outros membros vejam. Em seguida, os papéis são misturados e cada membro deve escolher um papel e continuar a história por mais algumas frases. O resultado final é uma história coletiva, criada por todos os membros do grupo.",
+            photos: ["profile", "kiev-gama", "juliano-paes"]
+        ),
+
+
+        
     ].filter{!$0.isConcluded}.reversed()
 
     func add(card: CardInformation) {

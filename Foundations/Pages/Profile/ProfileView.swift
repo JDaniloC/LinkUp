@@ -48,7 +48,6 @@ struct ProfileView: View {
                     }
                     Text(profileVM.profile.name)
                     HStack(spacing: 0) {
-                        //check status, editable status
                         Text("Me sentindo... ")
                         if myProfilePage(){
                             DynamicStatus()

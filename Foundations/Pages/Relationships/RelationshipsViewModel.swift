@@ -22,25 +22,37 @@ final class RelationshipsViewModel: ObservableObject {
                         – Não! Tenho medo de altura, prefiro caminhar!
                     """,
                     title: "História",
-                    description: "Confira a história que você está compartilhando"
+                    description: "Confira a história compartilhada"
                 )
             ],
             feedbacks: []
         ),
         Profile(
-            name: "Kiev Gama",
-            image: "kiev-gama",
-            status: "Focado",
+            name: "Juliano Paes",
+            image: "juliano-paes",
+            status: "inspirado",
             cardList: [
                 CardInfo(
                     text: """
-                    Fui ao supermercado fazer umas compras e, chegando lá, lembrei-me de que precisava de uma vassoura nova. Peguei tudo o que queria comprar e fui ao caixa. Quando passei a vassoura, a funcionária perguntou:
-                    – Vai levar montada?
-                    Sem perceber que ela se referia à conexão entre o cabo e a ponta da vassoura, respondi, brincando:
-                        – Não! Tenho medo de altura, prefiro caminhar!
+                    Eu espero que este projeto seja uma oportunidade para aprender coisas novas e expandir minhas habilidades, enquanto trabalhamos em conjunto para criar algo que realmente faça a diferença.
                     """,
-                    title: "História",
-                    description: "Confira a história que você está compartilhando"
+                    title: "Objetivo",
+                    description: "Confira o objetivo"
+                ),
+                CardInfo(
+                    text: """
+                    Atualmente estou lendo O Guia do Mochileiro das Galáxias.
+                    O mais maneiro é que o livro é tipo uma crítica muito engraçada e inteligente à nossa sociedade, sabe? Tipo, é tudo uma grande piada mas ao mesmo tempo faz você pensar em algumas coisas...tô curtindo demais! Se vc já leu, vamos converar sobre!!!
+                    """,
+                    title: "Leitura Atual",
+                    description: "Confira a leitura compartilhada"
+                ),
+                CardInfo(
+                    text: """
+                    1. nenhum
+                    """,
+                    title: "Gatos mais bonitos que o meu",
+                    description: "Confira os 'gatos mais bonitos que o meu' compartilhada"
                 )
             ],
             feedbacks: []
@@ -53,7 +65,25 @@ final class RelationshipsViewModel: ObservableObject {
                 CardInfo(
                     text: "Com esse projeto espero aprender a fazer animações com o figma e aprender o básico de programação.",
                     title: "Objetivos",
-                    description: "Confira os objetivos que você está compartilhando"
+                    description: "Confira os objetivos compartilhado"
+                ),
+                CardInfo(
+                    text:  """
+                    Uma das minhas paixões é a fotografia. Adoro explorar lugares novos e capturar momentos únicos com a minha câmera. Além disso, também gosto de editar minhas fotos para deixá-las ainda mais bonitas e compartilhá-las nas redes sociais.
+
+                    Outro hobby que me dá muito prazer é a leitura. Eu amo me perder em histórias e viajar para outros mundos através das páginas dos livros. Tenho uma estante cheia de títulos diferentes e adoro descobrir novos autores e gêneros literários.
+                    """,
+                    title: "Paixões",
+                    description: "Confira as paixões compartilhadas"
+                ),
+                CardInfo(
+                    text:  """
+                        Ao longo dos anos, desenvolvi uma habilidade para liderança de equipes e gestão de projetos. Gosto de trabalhar com pessoas e incentivar o desenvolvimento de suas habilidades individuais para que possam alcançar seus objetivos e contribuir para o sucesso do projeto como um todo.
+
+                        Além disso, sou muito bom em análise de dados e estatísticas. Eu adoro trabalhar com números e transformá-los em insights que possam ajudar a tomar decisões estratégicas em projetos. Essa habilidade já me ajudou em diversas situações, tanto em projetos profissionais quanto em projetos pessoais.
+                    """,
+                    title: "Habilidades",
+                    description: "Confira as habilidades compartilhadas"
                 )
             ],
             feedbacks: []
