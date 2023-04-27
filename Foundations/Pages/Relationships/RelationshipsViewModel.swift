@@ -10,8 +10,8 @@ import SwiftUI
 final class RelationshipsViewModel: ObservableObject {
     @Published var relationships: [Profile] = [
         Profile(
-            name: "Juliano Paes",
-            image: "juliano-paes",
+            name: "Kiev Gama",
+            image: "kiev-gama",
             status: "Focado",
             cardList: [
                 CardInfo(
