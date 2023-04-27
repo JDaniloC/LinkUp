@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF062D29E1C08E0057C938 /* Feedbacks.swift */; };
+		7994D11729F9CEAA0046F3B1 /* DynamicStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D11629F9CEAA0046F3B1 /* DynamicStatusBar.swift */; };
 		79EAA59129E847E0007FA30A /* CreateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA59029E847E0007FA30A /* CreateCard.swift */; };
 		B22C729D29F81E4C007FD9D9 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C729C29F81E4C007FD9D9 /* History.swift */; };
 		B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		65FF062D29E1C08E0057C938 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
+		7994D11629F9CEAA0046F3B1 /* DynamicStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicStatusBar.swift; sourceTree = "<group>"; };
 		79EAA59029E847E0007FA30A /* CreateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCard.swift; sourceTree = "<group>"; };
 		B22C729C29F81E4C007FD9D9 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B25105F929DE028C00E4F7A1 /* DynamicDescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDescriptionPage.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				EA64C52E29EF284A002D6877 /* StyledFonts.swift */,
 				EA85FFD429F6FC3A00C80012 /* GradientBackground.swift */,
 				EA51C7E729F81FF600A65807 /* MemojiInputView.swift */,
+				7994D11629F9CEAA0046F3B1 /* DynamicStatusBar.swift */,
 			);
 			name = Components;
 			path = Foundations/Components;
@@ -471,6 +474,7 @@
 				EA64C52F29EF284A002D6877 /* StyledFonts.swift in Sources */,
 				65FF062E29E1C08E0057C938 /* Feedbacks.swift in Sources */,
 				B25105FA29DE028C00E4F7A1 /* DynamicDescriptionPage.swift in Sources */,
+				7994D11729F9CEAA0046F3B1 /* DynamicStatusBar.swift in Sources */,
 				B27A26A729EEC96E004955ED /* DynamicsProgress.swift in Sources */,
 				EA85FFDE29F70DD800C80012 /* NavigationView.swift in Sources */,
 				B2BA676029DC9EB9008C32A9 /* CardView.swift in Sources */,
