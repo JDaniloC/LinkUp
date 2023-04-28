@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FoundationsApp: App {
+    @StateObject private var profileVM = ProfileViewModel()
+
     var body: some Scene {
         WindowGroup {
             NavigationView()
+                .environmentObject(profileVM)
         }
     }
 }

@@ -10,10 +10,9 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var profileVM: ProfileViewModel
+    @EnvironmentObject var dynamicsVM: DynamicsViewModel
     @EnvironmentObject var navigationVM: NavigationViewModel
 
-    
-   
     public var pageName: String = "Meu Perfil"
 
     func changeImage(newImage: String) {
@@ -21,13 +20,10 @@ struct ProfileView: View {
     }
     
     func navigateToDynamics() {
+        dynamicsVM.filter = profileVM.profile.name
         navigationVM.setSelectedTab(navigateTo: Tabs.dynamics)
     }
     
-    func myProfilePage() -> Bool{
-        return self.pageName == "Meu Perfil"
-    }
-        
     var body: some View {
         VStack {
             Text(pageName)
@@ -37,7 +33,7 @@ struct ProfileView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
                     
-                    if myProfilePage() {
+                    if profileVM.isMyProfile {
                         MemojiInputView(
                             profileVM.profile.image,
                             handler: changeImage
@@ -49,16 +45,14 @@ struct ProfileView: View {
                     Text(profileVM.profile.name)
                     HStack(spacing: 0) {
                         Text("Me sentindo... ")
-                        if myProfilePage(){
+                        if profileVM.isMyProfile {
                             DynamicStatus()
                         } else{
                             Text(profileVM.profile.status)
                         }
-                        
                     }
-                                     
-                    
-                    if myProfilePage() {
+
+                    if profileVM.isMyProfile {
                         Button(action: {
                             profileVM.toggleCreatingNewCard()
                         }) {
@@ -85,16 +79,17 @@ struct ProfileView: View {
             CreateCard()
         }
     }
-    
 }
 
 struct Profile_Previews: PreviewProvider {
     @StateObject static var profileVM = ProfileViewModel()
+    @StateObject static var dynamicsVM = DynamicsViewModel()
     @StateObject static var navigationVM = NavigationViewModel()
 
     static var previews: some View {
        ProfileView()
            .environmentObject(profileVM)
+           .environmentObject(dynamicsVM)
            .environmentObject(navigationVM)
    }
 }

@@ -8,42 +8,38 @@
 import SwiftUI
 
 struct NavigationView: View {
-    @StateObject private var profileVM = ProfileViewModel()
     @StateObject var relationsVM = RelationshipsViewModel()
     @StateObject var navigationVM = NavigationViewModel()
+    @StateObject var dynamicsVM = DynamicsViewModel()
 
     var body: some View {
         TabView(selection: $navigationVM.selectedTab) {
             RelationshipsView(relationsVM: relationsVM)
                 .tabItem() {
-                    renderTagIcon(
-                        label: "Conexões",
+                    renderTagIcon(label: "Conexões",
                         optionToVerify: Tabs.relationships)
                 }
                 .tag(Tabs.relationships)
-                .environmentObject(profileVM)
+                .environmentObject(dynamicsVM)
                 .environmentObject(navigationVM)
 
             DynamicsView()
                 .tabItem() {
-                    renderTagIcon(
-                        label: "Dinâmicas",
+                    renderTagIcon(label: "Dinâmicas",
                         optionToVerify: Tabs.dynamics)
                 }
                 .tag(Tabs.dynamics)
+                .environmentObject(dynamicsVM)
                 .environmentObject(relationsVM)
 
             ProfileView()
                 .tabItem() {
-                    renderTagIcon(
-                        label: "Meu perfil",
+                    renderTagIcon(label: "Meu perfil",
                         optionToVerify: Tabs.profile)
                 }
                 .tag(Tabs.profile)
-                .environmentObject(profileVM)
         }
     }
-
 
     private func renderTagIcon(
         label: String,
@@ -59,7 +55,10 @@ struct NavigationView: View {
 }
 
 struct NavigationView_Previews: PreviewProvider {
+    @StateObject static private var profileVM = ProfileViewModel()
+
     static var previews: some View {
         NavigationView()
+            .environmentObject(profileVM)
     }
 }

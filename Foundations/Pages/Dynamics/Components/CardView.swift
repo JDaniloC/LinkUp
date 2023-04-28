@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CardView: View {
-    var card: CardInformation
+    var card: DynamicsInfos
     @EnvironmentObject var relationsVM: RelationshipsViewModel
     
     func finishDynamic() {
-        let imageList = viewModel.removeAndGetParticipants()
-        relationsVM.updateBonds(imageList: imageList)
+        let nameList = viewModel.removeAndGetParticipants()
+        relationsVM.updateBonds(nameList: nameList)
     }
 
     @EnvironmentObject var viewModel: DynamicsViewModel
@@ -58,11 +58,11 @@ struct CardView: View {
                                        isConcluded: $isConcluded,
                                        title: card.name,
                                        description: card.description,
-                                       photos: card.participants)
-                    .onDisappear(perform: {
-                        card.isConcluded = isConcluded
-                        finishDynamic()
-                    })
+                                       photos: card.participantsImages
+                ).onDisappear(perform: {
+                    card.isConcluded = isConcluded
+                    finishDynamic()
+                })
             }
         }
     }
@@ -79,10 +79,10 @@ struct CardView_Previews: PreviewProvider {
     @StateObject static var viewModel: DynamicsViewModel = DynamicsViewModel()
 
     static var previews: some View {
-       CardView(card: CardInformation(
+       CardView(card: DynamicsInfos(
            name: "Trocando Hobbies",
            description: "Descrição exemplo do Trocando Hobbies",
-           photos: ["profile"]
+           participants: [Participant(name: "Lisa Diniz", image: "profile")]
        )).environmentObject(viewModel)
    }
 }

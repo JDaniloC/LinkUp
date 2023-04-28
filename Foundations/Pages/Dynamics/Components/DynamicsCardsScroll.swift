@@ -8,20 +8,14 @@
 import SwiftUI
 
 struct DynamicsCardsScroll: View {
-    @Binding var scrollView: Bool
     @EnvironmentObject var viewModel: DynamicsViewModel
     
+    func filterFunc(card: DynamicsInfos) -> Bool {
+        return viewModel.filter == "" ||
+            card.participantsNames.contains(viewModel.filter)
+    }
+    
     var body: some View {
-        
-        Button(
-            action: {
-                scrollView.toggle()
-            },
-            label: {
-                Text("Empilhar Cards")
-        })
-        .offset()
-        
         ScrollView(showsIndicators: false) {
             VStack {
                 ForEach(viewModel.cards.reversed()) { card in
@@ -32,3 +26,15 @@ struct DynamicsCardsScroll: View {
         }
     }
 }
+
+struct DynamicsCardScrollPreviews: PreviewProvider {
+    @StateObject static var dynamicsVM = DynamicsViewModel()
+    @StateObject static var relationsVM = RelationshipsViewModel()
+
+    static var previews: some View {
+        DynamicsCardsScroll()
+            .environmentObject(relationsVM)
+            .environmentObject(dynamicsVM)
+    }
+}
+

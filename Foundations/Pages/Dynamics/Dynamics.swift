@@ -7,19 +7,32 @@
 
 import SwiftUI
 
-class CardInformation: Identifiable {
+struct Participant {
+    var name: String
+    var image: String
+}
+
+class DynamicsInfos: Identifiable {
     var id = UUID()
     var name: String
     var description: String
     var isConcluded: Bool
-    let participants: [String]
+    let participants: [Participant]
     private var _offset: CGSize = .zero
     
-    init(name: String, description: String, photos: [String]) {
+    init(name: String, description: String, participants: [Participant]) {
         self.name = name
-        self.description = description
         self.isConcluded = false
-        self.participants = photos
+        self.description = description
+        self.participants = participants
+    }
+    
+    var participantsNames: [String] {
+        self.participants.map{ $0.name }
+    }
+    
+    var participantsImages: [String] {
+        self.participants.map{ $0.image }
     }
     
     public var offset: CGSize {

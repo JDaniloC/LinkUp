@@ -96,9 +96,9 @@ final class RelationshipsViewModel: ObservableObject {
         self.getPositions()
     }
     
-    func updateBonds(imageList: [String]) {
+    func updateBonds(nameList: [String]) {
         self.relationships = self.relationships.map { (relation) -> Profile in
-            if imageList.contains(relation.image) {
+            if nameList.contains(relation.name) {
                 return Profile(name: relation.name,
                                image: relation.image,
                                force: min(relation.force + 1, 5),
