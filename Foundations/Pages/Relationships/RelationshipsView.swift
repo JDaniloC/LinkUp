@@ -31,6 +31,7 @@ struct RelationshipsView: View {
             y: position.y * size.height + 10
         )
     }
+
     
     var body: some View {
         NavigationStack(path: $navPath) {
@@ -47,6 +48,7 @@ struct RelationshipsView: View {
                                   end: CGPoint(
                                     x: n.position.x,
                                     y: n.position.y))
+                        .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
                         .stroke(Color("line-color"),
                                 lineWidth: CGFloat(n.force))
                         .shadow(radius: 1)

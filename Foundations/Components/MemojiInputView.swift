@@ -132,7 +132,8 @@ class MemojiInputViewController: UIViewController {
         memojiSelectorView.heightAnchor.constraint(
             equalToConstant: textView.frame.height
         ).isActive = true
-        memojiSelectorView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonaction)))
+        memojiSelectorView.addGestureRecognizer(UITapGestureRecognizer(
+            target: self, action: #selector(buttonaction)))
 
         //Setting Cursor color to none
         textView.tintColor = UIColor.clear
