@@ -23,6 +23,28 @@ final class RelationshipsViewModel: ObservableObject {
                     """,
                     title: "História",
                     description: "Confira a história compartilhada"
+                ),
+                CardInfo(
+                    text: "Com esse projeto espero aprender a fazer animações com o figma e aprender o básico de programação.",
+                    title: "Objetivos",
+                    description: "Confira os objetivos que você está compartilhando"
+                ),
+                CardInfo(
+                    text: """
+                    Atualmente estou lendo O Guia do Mochileiro das Galáxias.
+                    O mais maneiro é que o livro é tipo uma crítica muito engraçada e inteligente à nossa sociedade, sabe? Tipo, é tudo uma grande piada mas ao mesmo tempo faz você pensar em algumas coisas...tô curtindo demais! Se vc já leu, vamos converar sobre!!!
+                    """,
+                    title: "Leitura Atual",
+                    description: "Confira a leitura compartilhada"
+                ),
+                CardInfo(
+                    text:  """
+                        Ao longo dos anos, desenvolvi uma habilidade para liderança de equipes e gestão de projetos. Gosto de trabalhar com pessoas e incentivar o desenvolvimento de suas habilidades individuais para que possam alcançar seus objetivos e contribuir para o sucesso do projeto como um todo.
+
+                        Além disso, sou muito bom em análise de dados e estatísticas. Eu adoro trabalhar com números e transformá-los em insights que possam ajudar a tomar decisões estratégicas em projetos. Essa habilidade já me ajudou em diversas situações, tanto em projetos profissionais quanto em projetos pessoais.
+                    """,
+                    title: "Habilidades",
+                    description: "Confira as habilidades compartilhadas"
                 )
             ],
             feedbacks: []

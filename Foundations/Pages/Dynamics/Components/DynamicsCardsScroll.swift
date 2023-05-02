@@ -18,7 +18,7 @@ struct DynamicsCardsScroll: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                ForEach(viewModel.cards.reversed()) { card in
+                ForEach(viewModel.cards.reversed().filter(filterFunc)) { card in
                     CardView(card: card)
                         .padding(5)
                 }
