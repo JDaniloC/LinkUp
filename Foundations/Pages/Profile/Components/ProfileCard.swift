@@ -41,7 +41,8 @@ struct ProfileCard<Content: View>: View {
                 cornerRadius: 20
             ).stroke(Color("light-yellow"),
                      lineWidth: 2)
-        )
+        ).contentShape(.contextMenuPreview,
+                       RoundedRectangle(cornerRadius: 20))
     }
 }
 

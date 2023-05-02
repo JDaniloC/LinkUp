@@ -21,6 +21,7 @@ struct ProfileCardView<Content: View>: View {
         ScrollView(showsIndicators: false) {
             VStack {
                 Text(title)
+                    .foregroundColor(Color("black-color"))
                     .font(.inter(.bold, size: 30))
                     .padding(.vertical, 40)
                 content.padding()
