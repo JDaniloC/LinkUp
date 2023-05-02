@@ -35,17 +35,26 @@ struct ProfileCardGrid: View {
                     }
                 
                 if viewModel.isMyProfile {
-                    myCard
-                        .contextMenu(menuItems: {
-                            Button(
-                                action: {editCard(card)},
-                                label: {Label("Editar", systemImage: "pencil")})
-                            Button(
-                                role: .destructive,
-                                action: {deleteCard(card.id)},
-                                label: {Label("Apagar", systemImage: "trash")}
-                            )
-                        })
+                    if card.title != "Feedbacks" && card.title != "Objetivos" {
+                        myCard
+                            .contextMenu(menuItems: {
+                                Button(
+                                    action: {editCard(card)},
+                                    label: {Label("Editar", systemImage: "pencil")})
+                                Button(
+                                    role: .destructive,
+                                    action: {deleteCard(card.id)},
+                                    label: {Label("Apagar", systemImage: "trash")}
+                                )
+                            })
+                    } else {
+                        myCard
+                            .contextMenu(menuItems: {
+                                Button(
+                                    action: {editCard(card)},
+                                    label: {Label("Editar", systemImage: "pencil")})
+                            })
+                    }
                 } else { myCard }
 
             }
@@ -56,6 +65,7 @@ struct ProfileCardGrid: View {
                      Feedbacks()
                  } else {
                      Text(viewModel.textCardInfo.text)
+                         .foregroundColor(Color("black-color"))
                          .font(.inter(.regular, size: 20))
                          .padding(.horizontal, 20)
                  }
