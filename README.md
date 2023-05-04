@@ -10,9 +10,9 @@ This app was developed on [*IF810 - Tópicos Avançados em Negócios Online e Em
 
 ![CBL Journey](.github/cbl.png)
 
-<img align="right" width="30%" src=".github/home.gif">
-
 ## Inovation journey
+
+<img align="right" width="30%" src=".github/home.gif">
 
 > The Challenge Learning Framework is divided into three interconnected phases: Engage, Investigate and Act.
 
@@ -65,8 +65,9 @@ We used SwiftUI framework organized by MVVM architecture. Our solution has the f
 
 Finally, we present our pitch to Academies.
 
----
 <a href="https://github.com/jdaniloc/linkup/graphs/contributors"><img src="https://contrib.rocks/image?repo=jdaniloc/linkup"/></a>
+
+---
 
 - [José Danilo](https://github.com/JDaniloC)
 - [Maria Eduarda](https://github.com/Madu218)
